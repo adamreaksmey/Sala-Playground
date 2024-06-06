@@ -1,0 +1,1 @@
+This repository contains all the methods of data synchorization using both http methods and customized methods.
