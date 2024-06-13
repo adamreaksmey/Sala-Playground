@@ -1,19 +1,29 @@
+type LessonCountType = (
+  lessons: any,
+  ids?: Set<unknown>
+) => Promise<{
+  countAll: number
+  ids: unknown[]
+}>
+
+type TreeDeleteType = (tree: any, idToDelete: any) => any
+
 /**
  * Recursive function to get lesson children
  * @param {*} lessons
  * @param {*} ids
  * @returns
  */
-export const calculateLessonCount = async (lessons, ids = new Set()) => {
+export const calculateLessonCount: LessonCountType = async (
+  lessons: any,
+  ids = new Set()
+) => {
   let countAll = 0
 
   for (const lesson of lessons) {
     if (lesson.children && lesson.children.length > 0) {
       // if lesson/activity has children, we count the progress of its child instead
-      const { countAll: childCount } = await calculateLessonCount(
-        lesson.children,
-        ids
-      )
+      const { countAll: childCount } = await calculateLessonCount(lesson.children, ids)
       countAll += childCount
     } else if (lesson.type == 'lesson' || lesson.type == 'certification') {
       // for empty lesson
@@ -32,7 +42,7 @@ export const calculateLessonCount = async (lessons, ids = new Set()) => {
  * @param {*} ids
  * @returns
  */
-export const calculateLessonCountBasedOnQA = async (
+export const calculateLessonCountBasedOnQA: LessonCountType = async (
   lessons,
   ids = new Set()
 ) => {
@@ -65,8 +75,8 @@ export const calculateLessonCountBasedOnQA = async (
  * @param {*} idToDelete
  * @returns
  */
-export const searchDelete = (tree, idToDelete) => {
-  let cleanTree = tree.filter((el) => el.id != idToDelete)
+export const searchDelete: TreeDeleteType = (tree, idToDelete) => {
+  let cleanTree: any = tree.filter((el: any) => el.id != idToDelete)
   for (let i = 0; i < cleanTree.length; i++) {
     if (cleanTree[i].children && cleanTree[i].children.length > 0) {
       cleanTree[i].children = searchDelete(cleanTree[i].children, idToDelete)
