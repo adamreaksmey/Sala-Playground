@@ -4,8 +4,6 @@ type MainFunctionType = () => Promise<void>
 
 const main: MainFunctionType = async () => {
   // Perform magic here :)
-  console.log('hello world')
-  console.log(learningPath)
 }
 
 main().catch(console.error)
