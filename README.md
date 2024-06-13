@@ -6,14 +6,14 @@ Welcome to the **SALA Syncer** repository! This project encompasses various tech
 
 In this repository, you'll find comprehensive methods and examples for:
 
--  Synchronizing data using standard HTTP methods
--  Implementing custom synchronization techniques tailored to specific needs
+- Synchronizing data using standard HTTP methods
+- Implementing custom synchronization techniques tailored to specific needs
 
 ## Features
 
--  **HTTP Methods:** Explore synchronization using GET, POST, PUT, DELETE, and more.
--  **Custom Methods:** Learn about and implement bespoke synchronization strategies for specialized scenarios.
--  **Examples and Tutorials:** Detailed examples and step-by-step tutorials to guide you through each method.
+- **HTTP Methods:** Explore synchronization using GET, POST, PUT, DELETE, and more.
+- **Custom Methods:** Learn about and implement bespoke synchronization strategies for specialized scenarios.
+- **Examples and Tutorials:** Detailed examples and step-by-step tutorials to guide you through each method.
 
 ## Getting Started
 
@@ -30,8 +30,8 @@ In this repository, you'll find comprehensive methods and examples for:
    ```
 
 3. **Explore the methods:**
-   -  Check out the `/http` folder for synchronization using standard HTTP methods.
-   -  Dive into the `/custom` folder for unique synchronization techniques.
+   - Check out the `/http` folder for synchronization using standard HTTP methods.
+   - Dive into the `/custom` folder for unique synchronization techniques.
 
 ## Contributing
 

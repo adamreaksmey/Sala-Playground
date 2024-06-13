@@ -5,25 +5,25 @@
  * @returns
  */
 export const calculateLessonCount = async (lessons, ids = new Set()) => {
-   let countAll = 0
+  let countAll = 0
 
-   for (const lesson of lessons) {
-      if (lesson.children && lesson.children.length > 0) {
-         // if lesson/activity has children, we count the progress of its child instead
-         const { countAll: childCount } = await calculateLessonCount(
-            lesson.children,
-            ids
-         )
-         countAll += childCount
-      } else if (lesson.type == 'lesson' || lesson.type == 'certification') {
-         // for empty lesson
-      } else {
-         ids.add(lesson.id)
-         countAll++
-      }
-   }
+  for (const lesson of lessons) {
+    if (lesson.children && lesson.children.length > 0) {
+      // if lesson/activity has children, we count the progress of its child instead
+      const { countAll: childCount } = await calculateLessonCount(
+        lesson.children,
+        ids
+      )
+      countAll += childCount
+    } else if (lesson.type == 'lesson' || lesson.type == 'certification') {
+      // for empty lesson
+    } else {
+      ids.add(lesson.id)
+      countAll++
+    }
+  }
 
-   return { countAll, ids: Array.from(ids) }
+  return { countAll, ids: Array.from(ids) }
 }
 
 /**
@@ -33,30 +33,30 @@ export const calculateLessonCount = async (lessons, ids = new Set()) => {
  * @returns
  */
 export const calculateLessonCountBasedOnQA = async (
-   lessons,
-   ids = new Set()
+  lessons,
+  ids = new Set()
 ) => {
-   let countAll = 0
+  let countAll = 0
 
-   for (const lesson of lessons) {
-      if (lesson.children && lesson.children.length > 0) {
-         // if lesson/activity has children, we count the progress of its child instead
-         const { countAll: childCount } = await calculateLessonCountBasedOnQA(
-            lesson.children,
-            ids
-         )
-         countAll += childCount
-      } else if (lesson.type == 'lesson' || lesson.type == 'certification') {
-         // for empty lesson
-      } else {
-         if (lesson.questionId) {
-            ids.add(lesson.id)
-         }
-         countAll++
+  for (const lesson of lessons) {
+    if (lesson.children && lesson.children.length > 0) {
+      // if lesson/activity has children, we count the progress of its child instead
+      const { countAll: childCount } = await calculateLessonCountBasedOnQA(
+        lesson.children,
+        ids
+      )
+      countAll += childCount
+    } else if (lesson.type == 'lesson' || lesson.type == 'certification') {
+      // for empty lesson
+    } else {
+      if (lesson.questionId) {
+        ids.add(lesson.id)
       }
-   }
+      countAll++
+    }
+  }
 
-   return { countAll, ids: Array.from(ids) }
+  return { countAll, ids: Array.from(ids) }
 }
 
 /**
@@ -66,11 +66,11 @@ export const calculateLessonCountBasedOnQA = async (
  * @returns
  */
 export const searchDelete = (tree, idToDelete) => {
-   let cleanTree = tree.filter((el) => el.id != idToDelete)
-   for (let i = 0; i < cleanTree.length; i++) {
-      if (cleanTree[i].children && cleanTree[i].children.length > 0) {
-         cleanTree[i].children = searchDelete(cleanTree[i].children, idToDelete)
-      }
-   }
-   return cleanTree
+  let cleanTree = tree.filter((el) => el.id != idToDelete)
+  for (let i = 0; i < cleanTree.length; i++) {
+    if (cleanTree[i].children && cleanTree[i].children.length > 0) {
+      cleanTree[i].children = searchDelete(cleanTree[i].children, idToDelete)
+    }
+  }
+  return cleanTree
 }
