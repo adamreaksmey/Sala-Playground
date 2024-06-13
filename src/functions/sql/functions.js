@@ -1,6 +1,7 @@
-import { promises as fs } from 'fs'
-import { fileURLToPath, pathToFileURL } from "url";
-import { dirname, join } from "path";
+import { promises as pfs } from 'fs'
+import { fileURLToPath, pathToFileURL } from 'url'
+import { dirname, join } from 'path'
+import { sqlToObjects } from './parser.js'
 
 /**
  * The following function takes an insert statement queries of an sql file
@@ -10,7 +11,7 @@ import { dirname, join } from "path";
  * @returns
  */
 export const __sqlDataManipulator = async (tableName = null, filePath) => {
-  const sqlFileContent = await fs.readFile(filePath, { encoding: 'utf8' })
+  const sqlFileContent = await pfs.readFile(filePath, { encoding: 'utf8' })
   const objectsContent = (await sqlToObjects(sqlFileContent)).map(
     replaceNullWithEmptyString
   )
