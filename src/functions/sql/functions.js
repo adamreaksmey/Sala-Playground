@@ -5,7 +5,7 @@
  * @param {*} filePath
  * @returns
  */
-export const __sqlManipulator = async (tableName = null, filePath) => {
+export const __sqlDataManipulator = async (tableName = null, filePath) => {
   const sqlFileContent = await fs.readFile(filePath, { encoding: 'utf8' })
   const objectsContent = (await sqlToObjects(sqlFileContent)).map(
     replaceNullWithEmptyString
