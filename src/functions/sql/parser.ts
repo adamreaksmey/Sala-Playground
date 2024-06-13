@@ -1,3 +1,4 @@
+type SQLtoObjectResponseType = (sql: any) => any
 /**
  * A lower level function to parse sql into array of objects.
  * Not perfect yet! Current weakness: if it detects a semi-colon that isnt
@@ -5,27 +6,27 @@
  * @param {*} sql
  * @returns
  */
-export const sqlToObjects = (sql) => {
+export const sqlToObjects: SQLtoObjectResponseType = (sql: any) => {
   // Split the input into individual INSERT statements
-  const statements = sql
+  const statements: any = sql
     .split(';')
-    .map((s) => s.trim())
-    .filter((s) => s.length > 0)
+    .map((s: any) => s.trim())
+    .filter((s: any) => s.length > 0)
 
   // Function to parse a single INSERT statement into an object
-  const parseInsertStatement = (statement) => {
+  const parseInsertStatement = (statement: any) => {
     // Extract column names
     // console.log("statement", statement)
     const columnPart = statement.match(/\(([^)]+)\)/)[1]
     const columns = columnPart
       .split(',')
-      .map((column) => column.trim().replace(/"/g, ''))
+      .map((column: any) => column.trim().replace(/"/g, ''))
 
     // Extract the values part, starting from 'VALUES (' to the end of the statement, excluding the last parenthesis.
     const valuesPart = statement.match(/VALUES\s+\((.+)\)$/)[1]
 
     // Manually parse the values to consider nested commas and parentheses
-    const values = []
+    const values: any[] = []
     let current = ''
     let inQuotes = false
     let parenDepth = 0
@@ -63,8 +64,8 @@ export const sqlToObjects = (sql) => {
     }
 
     // Create the object
-    const rowObject = {}
-    columns.forEach((column, index) => {
+    const rowObject: any = {}
+    columns.forEach((column: any, index: number) => {
       rowObject[column] = values[index].replace(/^'(.*)'$/, '$1')
     })
 
