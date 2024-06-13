@@ -1,9 +1,12 @@
+type UUIDResponseType = (value: string) => string | undefined
+type MapperResponseType = (data: any, key: string) => Map<unknown, unknown>
+
 /**
  * Checks if value is valid uuid
  * @param {*} value
  * @returns
  */
-export const isUUID = (value) => {
+export const isUUID: UUIDResponseType = (value: string) => {
   const uuidPattern =
     /^[0-9a-f]{8}-[0-9a-f]{4}-[4][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
   const isUUID = uuidPattern.test(value)
@@ -17,9 +20,9 @@ export const isUUID = (value) => {
  * @param {*} key
  * @returns
  */
-export const newMapper = (data, key) => {
+export const newMapper: MapperResponseType = (data: any, key: string) => {
   return new Map(
-    data.map((user) => {
+    data.map((user: any) => {
       return [user[key], user]
     })
   )
