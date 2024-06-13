@@ -71,3 +71,33 @@ export const calculateLessonCountBasedOnQA = async (
 
   return { countAll, ids: Array.from(ids) };
 };
+
+/**
+ * Deletes a lesson based on given activityId.
+ * @param {*} tree
+ * @param {*} idToDelete
+ * @returns
+ */
+export const searchDelete = (tree, idToDelete) => {
+  let cleanTree = tree.filter((el) => el.id != idToDelete);
+  for (let i = 0; i < cleanTree.length; i++) {
+    if (cleanTree[i].children && cleanTree[i].children.length > 0) {
+      cleanTree[i].children = searchDelete(cleanTree[i].children, idToDelete);
+    }
+  }
+  return cleanTree;
+};
+
+/**
+ * Mapper to use to compensate for the find function.
+ * @param {*} data
+ * @param {*} key
+ * @returns
+ */
+export const newMapper = (data, key) => {
+  return new Map(
+    data.map((user) => {
+      return [user[key], user];
+    })
+  );
+};
