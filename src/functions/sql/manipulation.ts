@@ -14,7 +14,7 @@ export const __sqlDataManipulator = async (tableName = null, filePath: any) => {
   const sqlFileContent: string = await pfs.readFile(filePath, {
     encoding: 'utf8',
   })
-  const objectsContent: any = (await sqlToObjects(sqlFileContent)).map(
+  const objectsContent = (await sqlToObjects(sqlFileContent)).map(
     replaceNullWithEmptyString
   )
 
