@@ -1,0 +1,5 @@
+// Regex to remove array objects:
+\[\s*(\{[^}]*\}(?:,\s*\{[^}]*\})*)\s*\]
+
+// Regex to remove semi colons that arent at the last of the line:
+;(?=.*\S)

@@ -8,7 +8,7 @@ const __dirname = dirname(__filename)
 
 class SQLgenerator {
   constructor() {}
-  
+
   sayHello() {
     console.log('hello world')
   }

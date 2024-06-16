@@ -5,6 +5,10 @@ type SQLtoObjectResponseType = (sql: any) => any
  * at the end of a line, it will throw an error.
  * @param {*} sql
  * @returns
+ * 
+ *  Note: my sql parser isnt working correctly especially dealing with semi colons
+ *  so if found, please console log, it will show you which line has a semi colon and
+ *  manually remove them yourself.
  */
 export const sqlToObjects: SQLtoObjectResponseType = (sql: any) => {
   // Split the input into individual INSERT statements
