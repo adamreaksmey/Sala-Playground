@@ -1,4 +1,4 @@
-import { learningPath } from "./services/lms-service/RESERVED_DATA/production/RL2024/learningPath"
+import { learningPath } from './services/lms-service/RESERVED_DATA/production/courses/RL2024/learningPath'
 
 type MainFunctionType = () => Promise<void>
 
