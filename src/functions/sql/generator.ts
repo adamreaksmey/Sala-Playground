@@ -9,7 +9,8 @@ const __dirname = dirname(__filename)
 class SQLgenerator {
   constructor() {}
 
-  sayHello() {
+  // Continue from here.
+  sayHello(): any {
     console.log('hello world')
   }
   /**
@@ -19,7 +20,7 @@ class SQLgenerator {
    * @param data
    * @param outputPath
    */
-  private sqlFileOutPutGenerator(data: any, outputPath: string) {
+  private sqlFileOutPutGenerator(data: any, outputPath: string): any {
     const filePath = path.join(__dirname, outputPath)
     try {
       fs.writeFileSync(join(__dirname, outputPath), data.join('\n'))
