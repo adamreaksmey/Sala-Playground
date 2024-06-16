@@ -1,6 +1,6 @@
 type LessonCountType = (
   lessons: any,
-  ids?: Set<unknown>
+  ids?: Set<unknown> | undefined
 ) => Promise<{
   countAll: number
   ids: unknown[]
