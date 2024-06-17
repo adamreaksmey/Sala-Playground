@@ -7,8 +7,10 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
 interface TableEntityConfig {
-  updateColumns: string[] /* Defines what columns you want updated. */
-  idColumn: string /* Your key column, this can be used to find a specific row from a value. */
+  /* Defines what columns you want updated. */
+  updateColumns: string[]
+  /* Your key column, this can be used to find a specific row from a value. */
+  idColumn: string
 }
 
 interface TableConfig {
