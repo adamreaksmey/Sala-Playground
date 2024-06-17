@@ -27,3 +27,14 @@ export const newMapper: MapperResponseType = (data: any, key: string) => {
     })
   )
 }
+
+/**
+ * A safer function to check whether an object has a
+ * passed key.
+ * @param _obj 
+ * @param _key 
+ * @returns 
+ */
+export const hasKey = (_obj: object, _key: string): boolean => {
+  return Object.prototype.hasOwnProperty.call(_obj, _key)
+}
