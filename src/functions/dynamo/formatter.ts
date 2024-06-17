@@ -3,6 +3,19 @@ import * as fs from 'fs'
 class DynamoFormatter {
   constructor() {}
 
+  /**
+   * Unedited, exported dynamo json files comes in the form of
+   * { data: 1 }
+   * { data: 2 }
+   * ...
+   * which is an invalid form of json
+   * so this function will help you parse it into a proper
+   * array of object json file which you can use to manipulate its data!
+   *
+   * @param inputFilename
+   * @param outputFilename
+   * @returns
+   */
   formatDynamoDBJson(inputFilename: string, outputFilename: string) {
     let contents: any = []
     try {
@@ -35,3 +48,5 @@ class DynamoFormatter {
     return false
   }
 }
+
+export default DynamoFormatter

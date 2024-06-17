@@ -9,10 +9,10 @@ const __dirname = dirname(__filename)
 class SQLgenerator {
   constructor() {}
 
-  // Continue from here.
   sayHello(): any {
     console.log('hello world')
   }
+  
   /**
    * Write generated inserts statement to file.
    * if path exists, it writes into there. if no,
