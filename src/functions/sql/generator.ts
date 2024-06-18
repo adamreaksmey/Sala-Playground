@@ -68,8 +68,8 @@ class SQLgenerator {
         )
 
         /**
-         * The following maps and properly wrap each
-         * column from updateColumns in a proper double quotes.
+         *  The following maps and properly wrap each
+         *  column from updateColumns in a proper double quotes.
          */
         let updateSet: string = updateColumns
           .map((col) => {
