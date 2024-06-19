@@ -3,6 +3,7 @@ import { fileURLToPath, pathToFileURL } from 'url'
 import { dirname, join } from 'path'
 import { sqlToObjects } from './parser.js'
 
+type manipulatorType = (tableName: null | undefined, filePath: any) => Promise<any>
 /**
  * The following function takes an insert statement queries of an sql file
  * turn it into an array of objects.
@@ -10,7 +11,10 @@ import { sqlToObjects } from './parser.js'
  * @param {*} filePath
  * @returns
  */
-export const __sqlDataManipulator = async (tableName = null, filePath: any) => {
+export const __sqlDataManipulator: manipulatorType = async (
+  tableName = null,
+  filePath: any
+) => {
   const sqlFileContent: string = await pfs.readFile(filePath, {
     encoding: 'utf8',
   })
