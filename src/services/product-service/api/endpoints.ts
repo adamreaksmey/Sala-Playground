@@ -6,3 +6,10 @@ export const IBF_stagingHost = 'https://sms-api.staging.ibfkh.org/products_servi
 export const SALA_stagingHost = 'https://sms-api.staging.sala.tech/products_service'
 /* Production url */
 export const IBF_prodHost = 'https://sms-api.ibfkh.org/products_service'
+
+export const httpMethods = {
+  post: 'POST',
+  get: 'GET',
+  patch: 'PATCH',
+  delete: 'DELETE',
+}
