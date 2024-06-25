@@ -17,3 +17,19 @@ export async function createOrganization(data: any): Promise<any> {
 
   return response
 }
+
+export async function updatedOrganization(data: any): Promise<any> {
+  let response: AxiosResponse<any, any> | unknown
+  try {
+    response = await axios({
+      method: httpMethods.patch,
+      url: `${localHost}/organizations/${data.orgId}`,
+      data,
+    })
+  } catch (error) {
+    console.log(error)
+    response = error
+  }
+
+  return response
+}
