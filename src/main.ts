@@ -5,7 +5,7 @@ type MainFunctionType = () => Promise<void>
 const main: MainFunctionType = async () => {
   for (let i = 0; i < 100; i++) {
     const payload = {
-      referenceId: '{{ORG_ID}}',
+      referenceId: uuidv4(),
       name: 'IBF Institute' + i,
       nameNative: 'IBF Institute native' + i,
       code: 'ORG-CODE' + i,
