@@ -1,4 +1,7 @@
-import { createOrganization } from './services/product-service/api/api'
+import {
+  createOrganization,
+  updatedOrganization,
+} from './services/product-service/api/api'
 import { v4 as uuidv4 } from 'uuid'
 import _File from './functions/files/functions'
 import created_uuid from './services/product-service/logs/created_uuid'
@@ -34,8 +37,16 @@ const main: MainFunctionType = async () => {
   //   `export default ${JSON.stringify(storedUUId)}`
   // )
 
-  for (let i = 0; i < created_uuid.length; i++) {
-    
+  for (const iterator of created_uuid) {
+    const payload = {
+      orgId: iterator,
+      name: 'IBF Institute',
+      nameNative: 'IBF Institute native',
+      code: 'ORG-CODE',
+    }
+
+    const response = await updatedOrganization(payload)
+    console.log(response)
   }
 }
 

@@ -31,10 +31,32 @@ export const newMapper: MapperResponseType = (data: any, key: string) => {
 /**
  * A safer function to check whether an object has a
  * passed key.
- * @param _obj 
- * @param _key 
- * @returns 
+ * @param _obj
+ * @param _key
+ * @returns
  */
 export const hasKey = (_obj: object, _key: string): boolean => {
   return Object.prototype.hasOwnProperty.call(_obj, _key)
+}
+
+/**
+ * Can be used to generate random shits.
+ * @param length 
+ * @returns 
+ */
+export const generateRandomShits = (length: number = 8): string => {
+  const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  const lowercase = 'abcdefghijklmnopqrstuvwxyz'
+  const digits = '0123456789'
+  const specialCharacters = '!@#$%^&*()_+[]{}|;:,.<>?'
+
+  const allCharacters = uppercase + lowercase + digits + specialCharacters
+  let password = ''
+
+  for (let i = 0; i < length; i++) {
+    const randomIndex = Math.floor(Math.random() * allCharacters.length)
+    password += allCharacters[randomIndex]
+  }
+
+  return password
 }
