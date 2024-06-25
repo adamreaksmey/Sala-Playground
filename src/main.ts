@@ -5,6 +5,7 @@ import {
 import { v4 as uuidv4 } from 'uuid'
 import _File from './functions/files/functions'
 import created_uuid from './services/product-service/logs/created_uuid'
+import { generateRandomShits } from './functions/functions'
 
 type MainFunctionType = () => Promise<void>
 const main: MainFunctionType = async () => {
@@ -40,13 +41,13 @@ const main: MainFunctionType = async () => {
   for (const iterator of created_uuid) {
     const payload = {
       orgId: iterator,
-      name: 'IBF Institute',
-      nameNative: 'IBF Institute native',
-      code: 'ORG-CODE',
+      name: generateRandomShits(10),
+      nameNative: generateRandomShits(10),
+      code: generateRandomShits(5),
     }
 
     const response = await updatedOrganization(payload)
-    console.log(response)
+    console.log(response?.data)
   }
 }
 
