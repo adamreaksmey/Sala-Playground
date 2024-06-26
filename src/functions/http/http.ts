@@ -6,19 +6,19 @@ const LOCALHOST = process.env.LOCAL_URL
 
 class Https {
   constructor(
-    private readonly url: string,
+    private readonly host: string,
     private readonly payload: any
   ) {
-    this.url = url
+    this.host = host
     this.payload = payload
   }
 
-  public async _get() {
+  public async _get(url: string): Promise<unknown> {
     let response: AxiosResponse<any, any> | unknown
     try {
       response = await axios({
         method: httpMethods.post,
-        url: this.url,
+        url: `${this.host}` + url,
         data: this.payload,
       })
     } catch (error) {
