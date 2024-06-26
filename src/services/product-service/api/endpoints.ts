@@ -1,5 +1,7 @@
+const { env } = process
+
 /* Local & dev url */
-export const localHost = 'http://localhost:8080/products_service'
+export const localHost = `${env.LOCAL_URL}/products_service`
 export const devHost = 'https://sms-api.dev.sala.tech/products_service'
 /* Staging url */
 export const IBF_stagingHost = 'https://sms-api.staging.ibfkh.org/products_service'

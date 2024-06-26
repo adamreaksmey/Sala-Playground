@@ -2,12 +2,14 @@ import axios from 'axios'
 import { localHost, httpMethods } from './endpoints'
 import type { AxiosResponse } from 'axios'
 
+const LOCALHOST = process.env.LOCAL_URL
+
 export async function createOrganization(data: any): Promise<any> {
   let response: AxiosResponse<any, any> | unknown
   try {
     response = await axios({
       method: httpMethods.post,
-      url: `${localHost}/organizations`,
+      url: `${LOCALHOST}/products_service/organizations`,
       data,
     })
   } catch (error) {
@@ -23,7 +25,7 @@ export async function updatedOrganization(data: any): Promise<any> {
   try {
     response = await axios({
       method: httpMethods.patch,
-      url: `${localHost}/organizations/${data.orgId}`,
+      url: `${LOCALHOST}/products_service/organizations/${data.orgId}`,
       data,
     })
   } catch (error) {
