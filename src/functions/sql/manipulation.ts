@@ -33,11 +33,11 @@ export const __sqlDataManipulator: manipulatorType = async (
         // guardianId: data?.guardianId,
       })
     }
-  } else {
-    formattedContent = objectsContent
+
+    return formattedContent
   }
 
-  return formattedContent
+  return objectsContent
 }
 
 const replaceNullWithEmptyString = (data: any) => {
