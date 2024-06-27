@@ -2,34 +2,48 @@ import axios from 'axios'
 import type { AxiosResponse } from 'axios'
 import { httpMethods } from './static'
 
-const LOCALHOST = process.env.LOCAL_URL
-
 class Https {
-  constructor(
-    private readonly host: string,
-    private readonly payload: any
-  ) {
-    this.host = host
-    this.payload = payload
-  }
+  constructor(private readonly host: string) {}
 
-  public async _get(url: string): Promise<AxiosResponse<any, any>> {
+  public async _get(url: string, payload: any): Promise<AxiosResponse<any, any>> {
     const response: AxiosResponse<any, any> = await axios({
       method: httpMethods.post,
       baseURL: this.host,
       url,
-      data: this.payload,
+      data: payload,
     })
 
     return response
   }
 
-  public async _post(url: string) {
+  public async _post(url: string, payload: any): Promise<AxiosResponse<any, any>> {
     const response: AxiosResponse<any, any> = await axios({
-      method: httpMethods.get,
+      method: httpMethods.post,
       baseURL: this.host,
       url,
-      data: this.payload,
+      data: payload,
+    })
+
+    return response
+  }
+
+  public async _patch(url: string, payload: any): Promise<AxiosResponse<any, any>> {
+    const response: AxiosResponse<any, any> = await axios({
+      method: httpMethods.patch,
+      baseURL: this.host,
+      url,
+      data: payload,
+    })
+
+    return response
+  }
+
+  public async _delete(url: string, payload: any): Promise<AxiosResponse<any, any>> {
+    const response: AxiosResponse<any, any> = await axios({
+      method: httpMethods.delete,
+      baseURL: this.host,
+      url,
+      data: payload,
     })
 
     return response
