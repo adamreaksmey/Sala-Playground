@@ -1,3 +1,4 @@
+import type { AxiosResponse } from 'axios'
 /**
  * Reserved http methods
  */
@@ -6,4 +7,11 @@ export const httpMethods = {
   get: 'GET',
   patch: 'PATCH',
   delete: 'DELETE',
+}
+
+export interface __HTTP__ {
+  _get(url: string, payload: any): Promise<AxiosResponse<any, any>>
+  _post(url: string, payload: any): Promise<AxiosResponse<any, any>>
+  _patch(url: string, payload: any): Promise<AxiosResponse<any, any>>
+  _delete(url: string, payload: any): Promise<AxiosResponse<any, any>>
 }

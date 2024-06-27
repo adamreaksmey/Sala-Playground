@@ -1,13 +1,14 @@
 import axios from 'axios'
 import type { AxiosResponse } from 'axios'
 import { httpMethods } from './static'
+import { __HTTP__ } from './static'
 
-class Https {
+class Https implements __HTTP__ {
   constructor(private readonly host: string) {}
 
   public async _get(url: string, payload: any): Promise<AxiosResponse<any, any>> {
     const response: AxiosResponse<any, any> = await axios({
-      method: httpMethods.post,
+      method: httpMethods.get,
       baseURL: this.host,
       url,
       data: payload,
