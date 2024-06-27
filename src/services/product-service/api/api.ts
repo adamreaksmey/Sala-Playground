@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { localHost, httpMethods } from './endpoints'
+import { httpMethods } from './endpoints'
 import type { AxiosResponse } from 'axios'
 
 const LOCALHOST = process.env.LOCAL_URL
