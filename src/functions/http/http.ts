@@ -13,18 +13,24 @@ class Https {
     this.payload = payload
   }
 
-  public async _get(url: string): Promise<unknown> {
-    let response: AxiosResponse<any, any> | unknown
-    try {
-      response = await axios({
-        method: httpMethods.post,
-        url: `${this.host}` + url,
-        data: this.payload,
-      })
-    } catch (error) {
-      console.log(error)
-      response = error
-    }
+  public async _get(url: string): Promise<AxiosResponse<any, any>> {
+    const response: AxiosResponse<any, any> = await axios({
+      method: httpMethods.post,
+      baseURL: this.host,
+      url,
+      data: this.payload,
+    })
+
+    return response
+  }
+
+  public async _post(url: string) {
+    const response: AxiosResponse<any, any> = await axios({
+      method: httpMethods.get,
+      baseURL: this.host,
+      url,
+      data: this.payload,
+    })
 
     return response
   }
