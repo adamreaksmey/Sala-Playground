@@ -4,9 +4,13 @@ import { httpMethods } from './static'
 import { __HTTP__ } from './static'
 
 class Https implements __HTTP__ {
-  constructor(private readonly host: string) {}
+  constructor(private readonly host: string | undefined) {
+    if (!host) {
+      throw new Error('Host is undefined or never provided!')
+    }
+  }
 
-  public async _get(url: string, payload: any): Promise<AxiosResponse<any, any>> {
+  public async _get(url: string, payload?: any): Promise<AxiosResponse<any, any>> {
     const response: AxiosResponse<any, any> = await axios({
       method: httpMethods.get,
       baseURL: this.host,
@@ -14,10 +18,10 @@ class Https implements __HTTP__ {
       data: payload,
     })
 
-    return response
+    return response.data
   }
 
-  public async _post(url: string, payload: any): Promise<AxiosResponse<any, any>> {
+  public async _post(url: string, payload?: any): Promise<AxiosResponse<any, any>> {
     const response: AxiosResponse<any, any> = await axios({
       method: httpMethods.post,
       baseURL: this.host,
@@ -28,7 +32,7 @@ class Https implements __HTTP__ {
     return response
   }
 
-  public async _patch(url: string, payload: any): Promise<AxiosResponse<any, any>> {
+  public async _patch(url: string, payload?: any): Promise<AxiosResponse<any, any>> {
     const response: AxiosResponse<any, any> = await axios({
       method: httpMethods.patch,
       baseURL: this.host,
@@ -39,7 +43,7 @@ class Https implements __HTTP__ {
     return response
   }
 
-  public async _delete(url: string, payload: any): Promise<AxiosResponse<any, any>> {
+  public async _delete(url: string, payload?: any): Promise<AxiosResponse<any, any>> {
     const response: AxiosResponse<any, any> = await axios({
       method: httpMethods.delete,
       baseURL: this.host,
