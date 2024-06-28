@@ -56,28 +56,6 @@ class Https implements __HTTP__ {
   public async _head(url: string, payload?: any): Promise<AxiosResponse<any, any>> {
     return this.request(HttpMethods.HEAD, url, payload)
   }
-
-  public async _head(url: string, payload?: any): Promise<AxiosResponse<any, any>> {
-    const response: AxiosResponse<any, any> = await axios({
-      method: 'HEAD',
-      baseURL: this.host,
-      url,
-      data: payload,
-    })
-
-    return response
-  }
-
-  public async _put(url: string, payload?: any): Promise<AxiosResponse<any, any>> {
-    const response: AxiosResponse<any, any> = await axios({
-      method: 'PUT',
-      baseURL: this.host,
-      url,
-      data: payload,
-    })
-
-    return response.data
-  }
 }
 
 export default Https
