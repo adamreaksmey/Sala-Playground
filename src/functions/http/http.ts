@@ -1,6 +1,6 @@
 import axios from 'axios'
 import type { AxiosResponse } from 'axios'
-import { httpMethods } from './static'
+import { HttpMethods } from './static'
 import { __HTTP__ } from './static'
 
 class Https implements __HTTP__ {
@@ -10,48 +10,51 @@ class Https implements __HTTP__ {
     }
   }
 
-  public async _get(url: string, payload?: any): Promise<AxiosResponse<any, any>> {
+  private async request(
+    method: HttpMethods,
+    url: string,
+    payload?: any
+  ): Promise<AxiosResponse<any, any>> {
     const response: AxiosResponse<any, any> = await axios({
-      method: httpMethods.get,
+      method,
       baseURL: this.host,
       url,
       data: payload,
     })
 
-    return response.data
+    return response
+  }
+
+  public async _get(url: string, payload?: any): Promise<AxiosResponse<any, any>> {
+    return this.request(HttpMethods.GET, url, payload)
   }
 
   public async _post(url: string, payload?: any): Promise<AxiosResponse<any, any>> {
-    const response: AxiosResponse<any, any> = await axios({
-      method: httpMethods.post,
-      baseURL: this.host,
-      url,
-      data: payload,
-    })
-
-    return response
+    return this.request(HttpMethods.POST, url, payload)
   }
 
   public async _patch(url: string, payload?: any): Promise<AxiosResponse<any, any>> {
-    const response: AxiosResponse<any, any> = await axios({
-      method: httpMethods.patch,
-      baseURL: this.host,
-      url,
-      data: payload,
-    })
-
-    return response
+    return this.request(HttpMethods.PATCH, url, payload)
   }
 
-  public async _delete(url: string, payload?: any): Promise<AxiosResponse<any, any>> {
-    const response: AxiosResponse<any, any> = await axios({
-      method: httpMethods.delete,
-      baseURL: this.host,
-      url,
-      data: payload,
-    })
+  public async _put(url: string, payload?: any): Promise<AxiosResponse<any, any>> {
+    return this.request(HttpMethods.PUT, url, payload)
+  }
 
-    return response
+  public async _connect(url: string, payload?: any): Promise<AxiosResponse<any, any>> {
+    return this.request(HttpMethods.CONNECT, url, payload)
+  }
+
+  public async _options(url: string, payload?: any): Promise<AxiosResponse<any, any>> {
+    return this.request(HttpMethods.OPTIONS, url, payload)
+  }
+
+  public async _trace(url: string, payload?: any): Promise<AxiosResponse<any, any>> {
+    return this.request(HttpMethods.TRACE, url, payload)
+  }
+
+  public async _head(url: string, payload?: any): Promise<AxiosResponse<any, any>> {
+    return this.request(HttpMethods.HEAD, url, payload)
   }
 
   public async _head(url: string, payload?: any): Promise<AxiosResponse<any, any>> {
