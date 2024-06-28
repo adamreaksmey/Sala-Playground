@@ -14,4 +14,9 @@ export interface __HTTP__ {
   _post(url: string, payload: any): Promise<AxiosResponse<any, any>>
   _patch(url: string, payload: any): Promise<AxiosResponse<any, any>>
   _delete(url: string, payload: any): Promise<AxiosResponse<any, any>>
+  _head(url: string, payload?: any): Promise<AxiosResponse<any, any>>
+  _put(url: string, payload?: any): Promise<AxiosResponse<any, any>>
+  _connect(url: string, payload?: any): Promise<AxiosResponse<any, any>>
+  _options(url: string, payload?: any): Promise<AxiosResponse<any, any>>
+  _trace(url: string, payload?: any): Promise<AxiosResponse<any, any>>
 }

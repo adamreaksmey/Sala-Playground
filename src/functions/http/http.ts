@@ -86,6 +86,28 @@ class Https implements __HTTP__ {
 
     return response.data
   }
+
+  public async _options(url: string, payload?: any): Promise<AxiosResponse<any, any>> {
+    const response: AxiosResponse<any, any> = await axios({
+      method: 'OPTIONS',
+      baseURL: this.host,
+      url,
+      data: payload,
+    })
+
+    return response.data
+  }
+
+  public async _trace(url: string, payload?: any): Promise<AxiosResponse<any, any>> {
+    const response: AxiosResponse<any, any> = await axios({
+      method: 'TRACE',
+      baseURL: this.host,
+      url,
+      data: payload,
+    })
+
+    return response.data
+  }
 }
 
 export default Https
