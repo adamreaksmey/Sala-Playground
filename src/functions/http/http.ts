@@ -1,5 +1,5 @@
 import axios from 'axios'
-import type { AxiosResponse } from 'axios'
+import type { AxiosResponse, AxiosRequestConfig } from 'axios'
 import { HttpMethods } from './static'
 import { __HTTP__ } from './static'
 
@@ -15,13 +15,17 @@ class Https implements __HTTP__ {
     url: string,
     payload?: any
   ): Promise<AxiosResponse<any, any>> {
-    const response: AxiosResponse<any, any> = await axios({
+    const request: AxiosRequestConfig = {
       method,
       baseURL: this.host,
       url,
       data: payload,
-    })
+    }
 
+    if (method == HttpMethods.GET) {
+      request['params'] = payload
+    }
+    const response: AxiosResponse<any, any> = await axios(request)
     return response
   }
 
