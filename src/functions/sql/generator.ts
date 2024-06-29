@@ -39,7 +39,7 @@ class SQLgenerator {
    * Generates query based on your needs :).
    * @param data
    */
-  public generator(data: any): any[] {
+  public generator(data: any, operation_method?: string): any[] {
     let queries: any[] = []
     for (let item of data) {
       // Prepare column names and values
@@ -87,14 +87,18 @@ class SQLgenerator {
         let idIndex: number = columns.indexOf(config.idColumn)
         let idValue: string = values[idIndex]
 
-        queries = this.queryWriter(queries, {
-          item,
-          updateSet,
-          config,
-          idValue,
-          columns,
-          values,
-        })
+        queries = this.queryWriter(
+          queries,
+          {
+            item,
+            updateSet,
+            config,
+            idValue,
+            columns,
+            values,
+          },
+          operation_method
+        )
       }
     }
 
@@ -138,7 +142,7 @@ class SQLgenerator {
    * @param settings
    * @returns
    */
-  private queryWriter(queries: any[], settings: any): any[] {
+  private queryWriter(queries: any[], settings: any, operation_method?: string): any[] {
     const { item, updateSet, config, idValue, columns, values } = settings
 
     switch (item.tableName) {
