@@ -1,5 +1,5 @@
 class SQLMethods {
-  constructor(private readonly tableName: string) {}
+  constructor(readonly tableName: string) {}
 
   public _insert(columns: any[], values: any[]): string {
     const query = `
