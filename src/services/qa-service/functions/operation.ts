@@ -30,22 +30,22 @@ class QaOperation {
   ): Promise<void> {
     
     const httpInstance = new Https(this.host)
-    for (const __I of progressToRemove) {
-      const response = await getUserProgressRecords({
-        idCard: __I.idCard,
-      })
-      console.log('Found user with their progress', response.length)
-      for (const __J of response) {
-        if (!allLearningPathIds.includes(__J.activityId)) {
-          const deleteResponse = await deleteSingleUserProgress({
-            activityId: __J.activityId,
-            userNumberId: usersMappedByIdCard.get(__I.idCard).userNumberId,
-          })
-          console.log('Irrelevant Id found and deleted!', deleteResponse)
-        }
-      }
-      console.log('Processing next user')
-    }
+    // for (const __I of progressToRemove) {
+    //   const response = await getUserProgressRecords({
+    //     idCard: __I.idCard,
+    //   })
+    //   console.log('Found user with their progress', response.length)
+    //   for (const __J of response) {
+    //     if (!allLearningPathIds.includes(__J.activityId)) {
+    //       const deleteResponse = await deleteSingleUserProgress({
+    //         activityId: __J.activityId,
+    //         userNumberId: usersMappedByIdCard.get(__I.idCard).userNumberId,
+    //       })
+    //       console.log('Irrelevant Id found and deleted!', deleteResponse)
+    //     }
+    //   }
+    //   console.log('Processing next user')
+    // }
   }
 }
 
