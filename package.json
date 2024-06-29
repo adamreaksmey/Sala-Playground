@@ -2,7 +2,6 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "build": "tsc",
     "sala": "tsc && node dist/main.js"
   },
   "dependencies": {

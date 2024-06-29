@@ -9,7 +9,7 @@ dotenv.config()
  */
 type MainFunctionType = () => Promise<void>
 const main: MainFunctionType = async () => {
-  console.log('hello world')
+  
 }
 
 main().catch(console.error)
