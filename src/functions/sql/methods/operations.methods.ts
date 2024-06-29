@@ -49,3 +49,5 @@ class SQLMethods {
     return query
   }
 }
+
+export default SQLMethods

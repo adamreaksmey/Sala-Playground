@@ -1,3 +1,4 @@
+import SQLMethods from './operations.methods'
 class CustomizedMethods extends SQLMethods {
   constructor(readonly tableName: string) {
     super(tableName)
@@ -34,3 +35,5 @@ class CustomizedMethods extends SQLMethods {
     return query
   }
 }
+
+export default CustomizedMethods
