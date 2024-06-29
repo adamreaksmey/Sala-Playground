@@ -2,7 +2,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "sala": "npx tsx src/main.ts"
+    "build": "tsc",
+    "sala": "tsc && node dist/main.js"
   },
   "dependencies": {
     "axios": "^1.7.2",

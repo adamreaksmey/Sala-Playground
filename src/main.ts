@@ -8,6 +8,8 @@ dotenv.config()
  * and perform your desired tasks. Happy coding! :)
  */
 type MainFunctionType = () => Promise<void>
-const main: MainFunctionType = async () => {}
+const main: MainFunctionType = async () => {
+  console.log('hello world')
+}
 
 main().catch(console.error)
