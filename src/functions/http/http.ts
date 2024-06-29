@@ -25,7 +25,7 @@ class Https implements __HTTP__ {
     if (method == HttpMethods.GET) {
       request['params'] = payload
     }
-    const response: AxiosResponse<any, any> = await axios(request)
+    const response = await axios(request)
     return response
   }
 
@@ -59,6 +59,10 @@ class Https implements __HTTP__ {
 
   public async _head(url: string, payload?: any): Promise<AxiosResponse<any, any>> {
     return this.request(HttpMethods.HEAD, url, payload)
+  }
+
+  public async _delete(url: string, payload?: any): Promise<AxiosResponse<any, any>> {
+    return this.request(HttpMethods.DELETE, url, payload)
   }
 }
 
