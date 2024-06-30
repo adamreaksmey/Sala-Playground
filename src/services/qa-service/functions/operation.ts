@@ -52,6 +52,30 @@ class QaOperation {
       console.log('Processing next user')
     }
   }
+
+  public async createUserProgressV1(
+    progressToBeCreated: any[],
+    usersMappedByIdCard: Map<any, any>
+  ): Promise<void> {
+    let counter = 0
+    for (const __student of progressToBeCreated) {
+      if (__student.progresses.length < 1) {
+        continue
+      }
+      for (const __progress of __student.progresses) {
+        const response = await createUserProgress({
+          activityId: __progress,
+          uniqueKey: __student.idCard,
+          userNumberId: usersMappedByIdCard.get(__student.idCard).userNumberId,
+        })
+        console.log(
+          `Created: student ${__student.idCard}. Response: ${JSON.stringify(response)}`
+        )
+      }
+      counter++
+      console.log('Numbers of student completed', counter)
+    }
+  }
 }
 
 export default QaOperation

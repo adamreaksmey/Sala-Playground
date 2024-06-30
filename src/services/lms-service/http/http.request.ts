@@ -51,6 +51,43 @@ class LmsService {
     const response = await this.httpInstance._delete(url)
     return response.data
   }
+
+  /**
+   * Creates a user's progress for a course.
+   * It fetches the user's information from the course too.
+   *
+   * @param orgId
+   * @param uniqueKey
+   * @param courseId
+   * @param activityId
+   * @param payload
+   * @returns
+   */
+  public async createUserProgress(
+    orgId: string,
+    uniqueKey: string,
+    courseId: string,
+    activityId: string,
+    payload: any
+  ) {
+    const url = `/lms_service/organizations/${orgId}/users/${uniqueKey}/courses/${courseId}/activities/${activityId}/progresses`
+    const response = await this.httpInstance._post(url, payload)
+
+    return response.data
+  }
+
+  /**
+   * Self-explainatory
+   * @param orgId
+   * @param courseId
+   * @param uniqueKey
+   */
+  public async getUserFromCourse(orgId: string, courseId: string, uniqueKey: string) {
+    const url = `/lms_service/organizations/${orgId}/courses/${courseId}/users?limit=10&start=0&filters=[]&sort={%22progress%22:%22desc%22}&keyword=${uniqueKey}`
+    const response = await this.httpInstance._get(url)
+
+    return response.data
+  }
 }
 
 export default LmsService
