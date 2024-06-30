@@ -12,8 +12,8 @@ class LmsService {
    * @returns
    */
   public async helloFromLms(url: string) {
-    const response = this.httpInstance._get(url)
-    return response
+    const response = await this.httpInstance._get(url)
+    return response.data
   }
 
   /**
@@ -28,7 +28,7 @@ class LmsService {
     const url = `/lms_service/organizations/${orgId}/users/${uniqueKey}/courses/${courseId}/progresses`
 
     const response = await this.httpInstance._get(url)
-    return response
+    return response.data
   }
 
   /**
@@ -49,7 +49,7 @@ class LmsService {
     const url = `/lms_service/organizations/${orgId}/courses/${courseId}/activities/${activityId}/${userNumberId}`
 
     const response = await this.httpInstance._delete(url)
-    return response
+    return response.data
   }
 }
 
