@@ -53,9 +53,18 @@ class QaOperation {
     }
   }
 
+  /**
+   * Create user's progress based on course.
+   * @param progressToBeCreated
+   * @param usersMappedByIdCard
+   * @param orgId
+   * @param courseId
+   */
   public async createUserProgressV1(
     progressToBeCreated: any[],
-    usersMappedByIdCard: Map<any, any>
+    usersMappedByIdCard: Map<any, any>,
+    orgId: string,
+    courseId: string
   ): Promise<void> {
     let counter = 0
     for (const __student of progressToBeCreated) {
@@ -63,11 +72,13 @@ class QaOperation {
         continue
       }
       for (const __progress of __student.progresses) {
-        const response = await createUserProgress({
-          activityId: __progress,
-          uniqueKey: __student.idCard,
-          userNumberId: usersMappedByIdCard.get(__student.idCard).userNumberId,
-        })
+        const response = await this.lmsInstance.createUserProgress(
+          orgId,
+          __student.idCard,
+          courseId,
+          __progress,
+          usersMappedByIdCard.get(__student.idCard).userNumberId
+        )
         console.log(
           `Created: student ${__student.idCard}. Response: ${JSON.stringify(response)}`
         )

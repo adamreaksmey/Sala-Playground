@@ -68,10 +68,18 @@ class LmsService {
     uniqueKey: string,
     courseId: string,
     activityId: string,
-    payload: any
+    userNumberId: number
   ) {
+    const courseUser = await this.getUserFromCourse(orgId, courseId, uniqueKey)
+    const mainPayload = {
+      progress: 'N/A',
+      percentage: 100,
+      isCompleted: true,
+      userNumberId,
+      courseUserId: courseUser.courseUserId,
+    }
     const url = `/lms_service/organizations/${orgId}/users/${uniqueKey}/courses/${courseId}/activities/${activityId}/progresses`
-    const response = await this.httpInstance._post(url, payload)
+    const response = await this.httpInstance._post(url, mainPayload)
 
     return response.data
   }
