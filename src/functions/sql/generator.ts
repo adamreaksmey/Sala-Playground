@@ -124,7 +124,6 @@ class SQLgenerator {
       }
     })
 
-    console.log(response)
     return response
   }
 
