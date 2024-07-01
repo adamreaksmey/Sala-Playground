@@ -1,6 +1,8 @@
 import dotenv from 'dotenv'
 dotenv.config()
 import { csvToJson } from './services/academic-service/functions/csvtojson'
+import Https from './functions/http/http'
+import SQLgenerator from './functions/sql/generator'
 /**
  * This is where main functions are performed.
  * You may read the documents in the notes, import
@@ -10,39 +12,40 @@ import { csvToJson } from './services/academic-service/functions/csvtojson'
  */
 type MainFunctionType = () => Promise<void>
 const main: MainFunctionType = async () => {
-  const paths = [
-    {
-      academicService: [
-        {
-          students:
-            '/Users/michaellogy/Desktop/sala-projects/data-sync-methods/students.csv',
-        },
-        {
-          school: '/Users/michaellogy/Desktop/sala-projects/data-sync-methods/school.csv',
-        },
-        {
-          configuration:
-            '/Users/michaellogy/Desktop/sala-projects/data-sync-methods/configuration.csv',
-        },
-        {
-          student_schema:
-            '/Users/michaellogy/Desktop/sala-projects/data-sync-methods/student_schema.csv',
-        },
-      ],
-    },
-    {
-      applicantService: [
-        {
-          applicants: {},
-        },
-      ],
-    },
-  ]
+  //   const instance = new Https(process.env.SMS_URL_STAGING)
+  //   const payload = {
+  //     name: 'Institute of Testing and Assuring',
+  //     nameNative: 'Institute of Testing and Assuring',
+  //     url: 'https://ita.staging.sala.tech',
+  //     email: 'ita@gmail.com',
+  //     phone: '011 2345 752/091 426 110',
+  //     adminLastName: 'Admin',
+  //     adminFirstName: 'ITA',
+  //     schoolType: 'University',
+  //     categories: [],
+  //     code: 'ITA',
+  //     schoolId: '8001ea7c-945c-4b95-81a6-044c67b53a52',
+  //     address: 'No. 10, Street 242 Khan Daun Penh, Phnom Penh, Cambodia',
+  //     isPublic: 'no',
+  //   }
+  //   const createSchoolResponse = await instance._post('/academic_service/schools', payload)
+  //   console.log(createSchoolResponse.data.data)
 
-  const response = await csvToJson(
+  const generatorInstance = new SQLgenerator()
+  let response: any[] = await csvToJson(
     '/Users/michaellogy/Desktop/sala-projects/data-sync-methods/configuration.csv'
   )
-  console.log(response)
+  response = response.map((data) => {
+    return {
+      ...data,
+      tableName: 'configuration',
+    }
+  })
+
+  const createInsert = generatorInstance.generator(response)
+  console.log(createInsert)
+
+    // console.log(response)
 }
 
 main().catch(console.error)

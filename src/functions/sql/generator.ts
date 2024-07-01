@@ -39,39 +39,27 @@ class SQLgenerator {
    * Generates query based on your needs :).
    * @param data
    */
-  public generator(data: any, operation_method?: string): any[] {
-    let queries: any[] = []
+  public generator(data: any[]): string[] {
+    let queries: string[] = []
     for (let item of data) {
       // Prepare column names and values
-      const columns: string[] = Object.keys(item).filter(
-        (key: string) => key !== 'tableName'
-      )
+      let columns = Object.keys(item).filter((key) => key !== 'tableName')
 
       // Validates data for every object.
-      let values: string[] = this.dataValidator(data, item)
+      let values = this.dataValidator(columns, item)
 
-      /**
-       * Checks if tableConfig is correctly set.
-       * @returns
-       */
-      const validatedConfig = (): boolean => {
-        return (
-          tableConfig[item.tableName] &&
-          columns.includes(tableConfig[item.tableName].idColumn)
-        )
-      }
+      const idCard = (() => {
+        return Object.prototype.hasOwnProperty.call(item, 'idCard') ? item.idCard : null
+      })()
 
-      if (validatedConfig()) {
-        const config: TableEntityConfig = tableConfig[item.tableName]
-        let updateColumns: string[] = config.updateColumns.filter((col: string) =>
-          columns.includes(col)
-        )
+      if (
+        tableConfig[item.tableName] &&
+        columns.includes(tableConfig[item.tableName].idColumn)
+      ) {
+        const config = tableConfig[item.tableName]
+        let updateColumns = config.updateColumns.filter((col) => columns.includes(col))
 
-        /**
-         *  The following maps and properly wrap each
-         *  column from updateColumns in a proper double quotes.
-         */
-        let updateSet: string = updateColumns
+        let updateSet = updateColumns
           .map((col) => {
             let valueIndex = columns.indexOf(col)
             return `"${col}" = ${
@@ -84,20 +72,26 @@ class SQLgenerator {
         if (!updateSet && config.updateColumns.length) {
           updateSet = `"${config.updateColumns[0]}" = NULL`
         }
-        let idIndex: number = columns.indexOf(config.idColumn)
-        let idValue: string = values[idIndex]
 
-        queries = this.queryWriter(
-          queries,
-          {
-            item,
-            updateSet,
-            config,
-            idValue,
-            columns,
-            values,
-          },
-          operation_method
+        let idIndex = columns.indexOf(config.idColumn)
+        let idValue = values[idIndex]
+
+        queries = this.queryWriter(queries, {
+          item,
+          updateSet,
+          config,
+          idValue,
+          columns,
+          values,
+        })
+      } else {
+        // Build the standard insert query for other cases
+        queries.push(
+          `INSERT INTO public.${item.tableName} (${columns
+            .map((column) => `"${column}"`)
+            .join(', ')}) VALUES (${values
+            .map((value) => (value === "''" ? 'NULL' : value))
+            .join(', ')});`
         )
       }
     }
@@ -130,6 +124,7 @@ class SQLgenerator {
       }
     })
 
+    console.log(response)
     return response
   }
 
@@ -173,7 +168,7 @@ class SQLgenerator {
    * @param data
    * @param outputPath
    */
-  private static sqlFileOutPutGenerator(data: any, outputPath: string): any {
+  public sqlFileOutPutGenerator(data: any, outputPath: string): any {
     const filePath = path.join(__dirname, outputPath)
     try {
       fs.writeFileSync(join(__dirname, outputPath), data.join('\n'))
