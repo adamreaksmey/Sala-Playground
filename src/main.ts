@@ -10,8 +10,8 @@ import { __sqlDataManipulator } from './functions/sql/manipulation'
 import SQLMethods from './functions/sql/methods/operations.methods'
 import { MongoClient } from 'mongodb'
 import employeesStaging from '../hr-staging.employees.json'
-import employeeSchema from "../src/services/hr-service/hr-staging.employeeschemas.json"
-import organization from "../src/services/hr-service/hr-staging.organization.json"
+import employeeSchema from '../src/services/hr-service/hr-staging.employeeschemas.json'
+import organization from '../src/services/hr-service/hr-staging.organization.json'
 
 type MainFunctionType = () => Promise<void>
 const main: MainFunctionType = async () => {
@@ -53,26 +53,38 @@ const main: MainFunctionType = async () => {
   // })
 
   // ------------ EMPLOYEE SCHEMA ----------------
+  const employeesUpdated = employeesStaging.map((data) => {
+    return {
+      ...data,
+      _id: uuidv4(),
+    }
+  })
 
-  const newCollection: any = organization
-  const mongouri = 'mongodb+srv://adam:UT3BpVvvLZwO4oYX@sala-cluster.uafixpy.mongodb.net/'
-  const client = new MongoClient(mongouri)
+  _File.reWriter(
+    './src/services/hr-service/updated/hr-staging.employees.json',
+    JSON.stringify(employeesUpdated),
+    false
+  )
 
-  try {
-    await client.connect()
-    console.log('mongo connected')
+  // const newCollection: any = organization
+  // const mongouri = 'mongodb+srv://adam:UT3BpVvvLZwO4oYX@sala-cluster.uafixpy.mongodb.net/'
+  // const client = new MongoClient(mongouri)
 
-    const database = client.db('hr-staging')
-    const collection = database.collection('organizations')
+  // try {
+  //   await client.connect()
+  //   console.log('mongo connected')
 
-    const result = await collection.insertMany(newCollection)
+  //   const database = client.db('hr-staging')
+  //   const collection = database.collection('organizations')
 
-    console.log('shit inserted', result)
-  } catch (error) {
-    console.log(error)
-  } finally {
-    await client.close()
-  }
+  //   const result = await collection.insertMany(newCollection)
+
+  //   console.log('shit inserted', result)
+  // } catch (error) {
+  //   console.log(error)
+  // } finally {
+  //   await client.close()
+  // }
 
   return
 }

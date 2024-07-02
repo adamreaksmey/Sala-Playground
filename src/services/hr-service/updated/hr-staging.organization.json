@@ -1,0 +1,13 @@
+[
+  {
+    "_id": "8001ea7c-945c-4b95-81a6-044c67b53a52",
+    "PK": "ORG#8001ea7c-945c-4b95-81a6-044c67b53a52",
+    "SK": "#METADATA#8001ea7c-945c-4b95-81a6-044c67b53a52",
+    "name": "Institute of Testing and Assuring",
+    "code": "ITA",
+    "address": "Phnom Penh",
+    "organizationId": "8001ea7c-945c-4b95-81a6-044c67b53a52",
+    "description": "Institute of Testing and Assuring",
+    "createdAt": "2024-01-10T08:04:51.031Z"
+  }
+]
