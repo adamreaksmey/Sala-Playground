@@ -3,7 +3,10 @@ import { fileURLToPath, pathToFileURL } from 'url'
 import { dirname, join } from 'path'
 import { sqlToObjects } from './parser.js'
 
-type manipulatorType = (tableName: null | undefined, filePath: any) => Promise<any>
+type manipulatorType = (
+  tableName: string | null | undefined,
+  filePath: any
+) => Promise<any>
 /**
  * The following function takes an insert statement queries of an sql file
  * turn it into an array of objects.
@@ -12,7 +15,7 @@ type manipulatorType = (tableName: null | undefined, filePath: any) => Promise<a
  * @returns
  */
 export const __sqlDataManipulator: manipulatorType = async (
-  tableName = null,
+  tableName: string | null = null,
   filePath: any
 ) => {
   const sqlFileContent: string = await pfs.readFile(filePath, {
@@ -24,18 +27,21 @@ export const __sqlDataManipulator: manipulatorType = async (
 
   let formattedContent = []
 
-  if (tableName == 'some_table_name') {
+  if (tableName == 'calendar') {
     for (const data of objectsContent) {
       formattedContent.push({
-        // Do data manipulation here :)
-        // tableName,
-        // uniqueKey: data.idCard,
-        // guardianId: data?.guardianId,
+        tableName,
+        ...data,
       })
     }
 
-    return formattedContent
+    return formattedContent.filter(
+      (row) => row.orgId == '8001ea7c-945c-4b95-81a6-044c67b53a52'
+    )
   }
+
+  // if (tableName == '') {
+  // }
 
   return objectsContent
 }
