@@ -46,7 +46,7 @@ class _File {
         Papa.parse(data, {
           header: true,
           complete: (results) => {
-            resolve(results.data)
+            resolve(results.data.slice(0, -1)) // Have to slice it off because it keeps coming out +1
           },
           error: (error: unknown | any) => {
             reject(error)
