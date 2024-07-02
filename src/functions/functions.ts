@@ -1,5 +1,5 @@
 type UUIDResponseType = (value: string) => string | undefined
-type MapperResponseType = (data: any, key: string) => Map<unknown, unknown>
+type MapperResponseType = (data: any, key: string) => Map<any, any>
 
 /**
  * Checks if value is valid uuid

@@ -10,10 +10,11 @@ class _File {
    * @param filePath
    * @param fileContent
    */
-  public static reWriter(filePath: string, fileContent: any): void {
+  public static reWriter(filePath: string, fileContent: any, isQuery?: boolean): void {
     try {
       console.log('Attempting to write file at:', filePath)
-      fs.writeFileSync(filePath, fileContent.join('\n'))
+      fs.writeFileSync(filePath, isQuery ? fileContent.join('\n') : fileContent)
+
       console.log('File written successfully at', filePath)
     } catch (error: any) {
       if (error.code === 'ENOENT') {
@@ -29,7 +30,12 @@ class _File {
     }
   }
 
-  public static csvToJson(filePath: string): Promise<unknown> {
+  /**
+   * Using Papaparse to convert csv to json
+   * @param filePath
+   * @returns
+   */
+  public static csvToJson(filePath: string): Promise<unknown | any> {
     return new Promise((resolve, reject) => {
       fs.readFile(filePath, 'utf8', (err, data) => {
         if (err) {
@@ -42,7 +48,7 @@ class _File {
           complete: (results) => {
             resolve(results.data)
           },
-          error: (error: unknown) => {
+          error: (error: unknown | any) => {
             reject(error)
           },
         })
