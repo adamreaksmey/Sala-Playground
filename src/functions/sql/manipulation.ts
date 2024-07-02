@@ -27,20 +27,24 @@ export const __sqlDataManipulator: manipulatorType = async (
 
   let formattedContent = []
 
-  if (tableName == 'calendar') {
-    for (const data of objectsContent) {
-      formattedContent.push({
-        tableName,
-        ...data,
-      })
-    }
-
-    return formattedContent.filter(
-      (row) => row.orgId == '8001ea7c-945c-4b95-81a6-044c67b53a52'
-    )
+  // if (tableName == 'event') {
+  for (const data of objectsContent) {
+    formattedContent.push({
+      tableName,
+      ...data,
+    })
   }
 
-  // if (tableName == '') {
+  return formattedContent
+  // }
+
+  // if (tableName == 'event') {
+  //   for (const data of objectsContent) {
+  //     formattedContent.push({
+  //       tableName,
+  //       ...data,
+  //     })
+  //   }
   // }
 
   return objectsContent

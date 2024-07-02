@@ -1,0 +1,2 @@
+dataSetId,orgId,name,nameNative,url,data,description,lastGeneratedAt,createdAt,updatedAt,dataSourcesType,filterBy
+dab7e99e-fb29-4a18-9798-7a0e79bdf1c7,0170ebdf-f7b9-4e6c-b803-2c1565677699,Student data,,,,Student information,2024-02-03 05:38:26.467426+00,2024-02-03 05:38:26.467426+00,2024-02-06 09:11:09.950009+00,student,"{""byCampus"": true, ""byEndDate"": false, ""byStartDate"": false, ""byGroupStructure"": true, ""byStructureRecord"": true}"
