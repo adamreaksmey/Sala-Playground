@@ -9,9 +9,12 @@ import uuids from './services/academic-service/logs/group_structure_uuid'
 import { __sqlDataManipulator } from './functions/sql/manipulation'
 import SQLMethods from './functions/sql/methods/operations.methods'
 import { MongoClient } from 'mongodb'
-import employeesStaging from '../hr-staging.employees.json'
-import employeeSchema from "../src/services/hr-service/hr-staging.employeeschemas.json"
-import organization from "../src/services/hr-service/hr-staging.organization.json"
+// import employeesStaging from '../hr-staging.employees.json'
+// import employeeSchema from '../src/services/hr-service/hr-staging.employeeschemas.json'
+// import organization from '../src/services/hr-service/hr-staging.organization.json'
+// import applicant from '../applicant-staging.applicants.json'
+// import applicantSchema from "../applicant-staging.applicantschemas.json"
+import applicantStep from '../applicant-staging.applicantsteps.json'
 
 type MainFunctionType = () => Promise<void>
 const main: MainFunctionType = async () => {
@@ -52,9 +55,25 @@ const main: MainFunctionType = async () => {
   //   }
   // })
 
-  // ------------ EMPLOYEE SCHEMA ----------------
+  // ------------ APPLICANT SCHEMA ----------------
+  let newApplicants: any = applicantStep
 
-  const newCollection: any = organization
+  const newCollection: any = () => {
+    let newAppSet: any[] = []
+
+    for (const iterator of newApplicants) {
+      newAppSet.push({
+        ...iterator,
+        // _id: uuidv4(),
+      })
+    }
+
+    return newAppSet
+  }
+
+  // return console.log(newCollection())
+
+  // ------------ MONGO AREA -----------------------
   const mongouri = 'mongodb+srv://adam:UT3BpVvvLZwO4oYX@sala-cluster.uafixpy.mongodb.net/'
   const client = new MongoClient(mongouri)
 
@@ -62,10 +81,11 @@ const main: MainFunctionType = async () => {
     await client.connect()
     console.log('mongo connected')
 
-    const database = client.db('hr-staging')
-    const collection = database.collection('organizations')
+    const database = client.db('applicant-staging')
+    const collection = database.collection('applicantsteps')
 
-    const result = await collection.insertMany(newCollection)
+    const result = await collection.insertMany(newCollection())
+    // const result = await collection.deleteMany({ layout: { $exists: true } })
 
     console.log('shit inserted', result)
   } catch (error) {
