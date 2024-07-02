@@ -12,11 +12,16 @@ import { MongoClient } from 'mongodb'
 // import employeesStaging from '../hr-staging.employees.json'
 // import employeeSchema from '../src/services/hr-service/hr-staging.employeeschemas.json'
 // import organization from '../src/services/hr-service/hr-staging.organization.json'
-// import applicant from '../applicant-staging.applicants.json'
-// import applicantSchema from "../applicant-staging.applicantschemas.json"
-import applicantStep from '../applicant-staging.applicantsteps.json'
+import applicant from '../src/services/applicant-service/applicant-staging.applicants.json'
+import applicantSchema from '../src/services/applicant-service/applicant-staging.applicantschemas.json'
+import applicantStep from '../src/services/applicant-service/applicant-staging.applicantsteps.json'
+import Mongo from './functions/mongo/mongoDB'
 
 type MainFunctionType = () => Promise<void>
+
+const mongoInstance = new Mongo(
+  'mongodb+srv://adam:UT3BpVvvLZwO4oYX@sala-cluster.uafixpy.mongodb.net/'
+)
 const main: MainFunctionType = async () => {
   //   const instance = new Https(process.env.SMS_URL_STAGING)
   //   const payload = {
@@ -73,28 +78,8 @@ const main: MainFunctionType = async () => {
 
   // return console.log(newCollection())
 
-  // ------------ MONGO AREA -----------------------
-  const mongouri = 'mongodb+srv://adam:UT3BpVvvLZwO4oYX@sala-cluster.uafixpy.mongodb.net/'
-  const client = new MongoClient(mongouri)
-
-  try {
-    await client.connect()
-    console.log('mongo connected')
-
-    const database = client.db('applicant-staging')
-    const collection = database.collection('applicantsteps')
-
-    const result = await collection.insertMany(newCollection())
-    // const result = await collection.deleteMany({ layout: { $exists: true } })
-
-    console.log('shit inserted', result)
-  } catch (error) {
-    console.log(error)
-  } finally {
-    await client.close()
-  }
-
-  return
+  // ------------ MONGO AREA ----------------
+  await mongoInstance.mongoInsertMany(newApplicants(), 'applicant-staging', 'applicants')
 }
 
 main().catch(console.error)
