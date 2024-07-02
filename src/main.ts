@@ -8,6 +8,8 @@ import { hasKey, newMapper } from './functions/functions'
 import uuids from './services/academic-service/logs/group_structure_uuid'
 import { __sqlDataManipulator } from './functions/sql/manipulation'
 import SQLMethods from './functions/sql/methods/operations.methods'
+import { MongoClient } from 'mongodb'
+import employeesStaging from '../hr-staging.employees.json'
 
 type MainFunctionType = () => Promise<void>
 const main: MainFunctionType = async () => {
@@ -30,22 +32,29 @@ const main: MainFunctionType = async () => {
   //   const createSchoolResponse = await instance._post('/academic_service/schools', payload)
   //   console.log(createSchoolResponse.data.data)
 
-  const generatorInstance = new SQLgenerator()
-  const gradingRecords = await _File.csvToJson('./grading_data_set.csv')
-
-  let mappedGrading = gradingRecords.map((data: any) => {
+  const newEmployees: any = employeesStaging.map((data) => {
     return {
       ...data,
-      orgId: '8001ea7c-945c-4b95-81a6-044c67b53a52',
-      tableName: 'data_set',
-      dataSetId: uuidv4(),
+      _id: uuidv4(),
     }
   })
 
-  const createGradingInsert = generatorInstance.generator(mappedGrading)
-  _File.reWriter('./src/services/report-service/data_set.sql', createGradingInsert, true)
+  const mongouri = 'mongodb+srv://adam:UT3BpVvvLZwO4oYX@sala-cluster.uafixpy.mongodb.net/'
+  const client = new MongoClient(mongouri)
 
-  console.log(mappedGrading)
+  try {
+    await client.connect()
+    console.log('mongo connected')
+
+    const database = client.db('hr-staging')
+    const collection = database.collection('employees')
+
+    const result = await collection.insertMany(newEmployees)
+
+    console.log('shit inserted', result)
+  } catch (error) {
+    console.log(error)
+  }
 
   return
 }
