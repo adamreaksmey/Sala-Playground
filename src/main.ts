@@ -16,6 +16,8 @@ import applicant from '../src/services/applicant-service/applicant-staging.appli
 import applicantSchema from '../src/services/applicant-service/applicant-staging.applicantschemas.json'
 import applicantStep from '../src/services/applicant-service/applicant-staging.applicantsteps.json'
 import Mongo from './functions/mongo/mongoDB'
+import userPermission from '../src/services/user-service/user-staging.userpermissions.json'
+import extraUserPermission from "../src/services/user-service/extra.user-staging.userpermissions.json"
 
 type MainFunctionType = () => Promise<void>
 
@@ -60,6 +62,15 @@ const main: MainFunctionType = async () => {
   //   }
   // })
 
+  let data: any = extraUserPermission
+  const result = await mongoInstance.mongoInsertMany(
+    data,
+    'user-staging',
+    'userpermissions'
+  )
+  console.log(result)
+
+  return
   // ------------ APPLICANT SCHEMA ----------------
   let newApplicants: any = applicantSchema
 
