@@ -94,6 +94,14 @@ class Https implements __HTTP__ {
   ): Promise<AxiosResponse<any, any>> {
     return this.request(HttpMethods.HEAD, url, payload, headers)
   }
+
+  public async _delete(
+    url: string,
+    payload?: any,
+    headers?: any
+  ): Promise<AxiosResponse<any, any>> {
+    return this.request(HttpMethods.DELETE, url, payload, headers)
+  }
 }
 
 export default Https

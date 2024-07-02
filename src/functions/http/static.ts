@@ -11,6 +11,7 @@ export enum HttpMethods {
   OPTIONS = 'options',
   TRACE = 'trace',
   HEAD = 'head',
+  DELETE = 'delete',
 }
 
 export interface __HTTP__ {
@@ -22,4 +23,5 @@ export interface __HTTP__ {
   _options(url: string, payload?: any): Promise<AxiosResponse<any, any>>
   _trace(url: string, payload?: any): Promise<AxiosResponse<any, any>>
   _head(url: string, payload?: any): Promise<AxiosResponse<any, any>>
+  _delete(url: string, payload?: any): Promise<AxiosResponse<any, any>>
 }
