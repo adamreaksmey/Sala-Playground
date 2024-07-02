@@ -1,5 +1,6 @@
 import * as fs from 'fs'
 import * as path from 'path'
+import Papa from 'papaparse'
 
 class _File {
   constructor() {}
@@ -9,10 +10,11 @@ class _File {
    * @param filePath
    * @param fileContent
    */
-  public static reWriter(filePath: string, fileContent: string): void {
+  public static reWriter(filePath: string, fileContent: any, isQuery?: boolean): void {
     try {
       console.log('Attempting to write file at:', filePath)
-      fs.writeFileSync(filePath, fileContent)
+      fs.writeFileSync(filePath, isQuery ? fileContent.join('\n') : fileContent)
+
       console.log('File written successfully at', filePath)
     } catch (error: any) {
       if (error.code === 'ENOENT') {
@@ -26,6 +28,32 @@ class _File {
         console.error('Error occurred while writing the file:', error)
       }
     }
+  }
+
+  /**
+   * Using Papaparse to convert csv to json
+   * @param filePath
+   * @returns
+   */
+  public static csvToJson(filePath: string): Promise<unknown | any> {
+    return new Promise((resolve, reject) => {
+      fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+          reject(err)
+          return
+        }
+
+        Papa.parse(data, {
+          header: true,
+          complete: (results) => {
+            resolve(results.data.slice(0, -1)) // Have to slice it off because it keeps coming out +1
+          },
+          error: (error: unknown | any) => {
+            reject(error)
+          },
+        })
+      })
+    })
   }
 }
 
