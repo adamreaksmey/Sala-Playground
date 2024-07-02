@@ -5,7 +5,9 @@
     "sala": "npx tsx src/main.ts"
   },
   "dependencies": {
+    "@faker-js/faker": "^8.4.1",
     "axios": "^1.7.2",
+    "cambodia-phone-generator": "^1.0.2",
     "dotenv": "^16.4.5",
     "moment": "^2.30.1",
     "mongodb": "^6.8.0",
@@ -13,6 +15,7 @@
     "uuid": "^10.0.0"
   },
   "devDependencies": {
+    "@types/faker": "^6.6.9",
     "@types/node": "^20.14.9",
     "@types/papaparse": "^5.3.14",
     "@types/uuid": "^10.0.0",
