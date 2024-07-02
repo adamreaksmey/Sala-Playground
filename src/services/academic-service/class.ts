@@ -1,11 +1,13 @@
 export const data = [
   {
+    campusId: '6b6e0818-76cc-4798-87da-75600f645767',
     '8c861554-25cf-4494-865d-74f4bbcb871d': [
       '80f19f8a-5329-4a82-9392-ae598a90ddf7',
       'd183b035-1196-41d1-9ed8-008f56326988',
     ],
   },
   {
+    campusId: '9899e202-3c52-478c-9845-ba7fbc1cef7f',
     'eb03dd55-0ea5-4a96-9727-d3946e60d906': [
       '0fb94157-c50b-41a3-8efa-37b68008b401',
       'e3a64d69-4623-48c8-bc5f-9dfeae6c0da8',
@@ -64,6 +66,7 @@ export const data = [
     ],
   },
   {
+    campusId: 'be8650db-8dfc-4f61-9dbc-90f5a5a973e0',
     'ba7e2241-7cd3-4340-b544-b5c3bb8e0986': [
       'e036fd40-cbc7-4a79-931c-11de99819a56',
       'a0be8d30-6425-4816-ae0a-83514f2172ec',
@@ -74,6 +77,38 @@ export const data = [
     ],
   },
   {
+    campusId: 'eaaf1680-9bd5-47a9-abb3-a767fee4e098',
+    '2cb9b237-bd50-4a47-9261-d56511a1393a': ['907f7120-983a-476d-bafc-7da742134fdd'],
+  },
+  {
+    campusId: 'e4b0a6bf-659d-4daf-9080-aeb5963c7e1e',
+    '8dbf82de-ab45-4270-91ac-388d40cf9873': [
+      '17ce9c5a-79fa-4434-b94b-d9f4fe7c972f',
+      '6eadc262-59f8-4b2a-9909-169f785dfba6',
+    ],
+  },
+  {
+    campusId: '9899e202-3c52-478c-9845-ba7fbc1cef7f',
+    '436e704b-b930-4031-ba2a-008ef573f084': [
+      'bb52aa73-fa79-44eb-b773-f1b0d8a8fd97',
+      '96d190af-803c-4814-af8c-87b5793a1b7f',
+      'e46bc92a-ffe3-4f54-84af-2b36c7a259fe',
+      'f449402d-4b70-4cf9-9adb-8c0589cb6b2c',
+      'd699641e-96e8-4d3d-9922-b0bd39acec2b',
+      'b06a5570-d601-47bf-b684-58c28ae9f651',
+      'd40eebb0-be12-496c-bc83-8d9ecfbb328b',
+      '47e0afc2-e8f2-471b-a1ac-4b4fa588888d',
+      '366552d8-d1da-47d7-aa90-fdf1af4f95dc',
+      '538692f8-7de2-4b22-a1c7-7c95ba439492',
+      'd615e301-ab28-4df4-976a-a1c0954c7b6b',
+      '003ce1c8-9205-4913-84e4-210efa25ea3d',
+      '692b7e11-8831-47cb-9831-606ad2cbf949',
+      '5c183752-d1dd-41fa-9fe9-f7e5879a23ce',
+      'dfb0c786-9db9-4e5f-934a-fdc3e904228f',
+    ],
+  },
+  {
+    campusId: 'be8650db-8dfc-4f61-9dbc-90f5a5a973e0',
     '6856443f-259a-4b65-b4ed-647f00c5bf70': [
       '8e550ffb-6bb2-495d-9a19-d2d0366899fc',
       '5ee625ec-793f-4000-b655-815baaf3b818',

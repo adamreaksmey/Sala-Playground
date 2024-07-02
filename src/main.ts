@@ -3,7 +3,8 @@ import Https from './functions/http/http'
 import { generateByOperator, generateByPrefix } from 'cambodia-phone-generator'
 import axios from 'axios'
 import { data as classes } from './services/academic-service/class'
-import { faker } from '@faker-js/faker';
+import { faker } from '@faker-js/faker'
+import Academic from './services/academic-service/http/functions.http'
 
 dotenv.config()
 type MainFunctionType = () => Promise<void>
@@ -14,8 +15,11 @@ const getRandomClasses = () => {
   // Pick a random object from the outer array
   const randomObject: any = classes[Math.floor(Math.random() * classes.length)]
 
-  // Get the keys of the object
-  const keys = Object.keys(randomObject)
+  // Get the campusId
+  const campusId = randomObject.campusId
+
+  // Get the keys of the object, excluding campusId
+  const keys = Object.keys(randomObject).filter((key) => key !== 'campusId')
 
   // Pick a random key from the keys
   const randomKey = keys[Math.floor(Math.random() * keys.length)]
@@ -26,29 +30,35 @@ const getRandomClasses = () => {
   // Pick a random value from the values array
   const randomValue = valuesArray[Math.floor(Math.random() * valuesArray.length)]
   return {
-    groupStructure: randomKey,
-    structureRecord: randomValue,
+    groupStructureId: randomKey,
+    structureRecordId: randomValue,
+    campusId,
   }
 }
 
 const main: MainFunctionType = async () => {
   const httpInstance = new Https(process.env.SMS_URL_DEV)
+  const academicInstance = new Academic(process.env.SMS_URL_STAGING)
   const phoneOperators: any = ['Cellcard', 'Smart', 'Metfone', 'CooTel']
+  const ITAschoolID = '8001ea7c-945c-4b95-81a6-044c67b53a52'
 
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 50; i++) {
     const randomPhoneIndex = Math.floor(Math.random() * phoneOperators.length)
     const randomPhone = generateByOperator(phoneOperators[randomPhoneIndex])
+    console.log('fetching user')
     const user = await axios({
       url: 'https://randomuser.me/api/',
       method: 'get',
     }).then((data) => {
       return data.data.results[0]
     })
+
     const idCard = await httpInstance
       ._get('/products_service/id/generator?prefix=IBF&type=sku')
       .then((id) => id.data)
 
-    console.log(user)
+    const { groupStructureId, structureRecordId, campusId } = getRandomClasses()
+
     const studentPayload = {
       phone: randomPhone,
       email: user.email,
@@ -68,14 +78,22 @@ const main: MainFunctionType = async () => {
         jobDepartment: 'administration',
         jobDivision: 'administrative',
         jobLevel: 'non-management',
-        jobPosition: 'Web Developer',
+        jobPosition: faker.person.jobTitle(),
         password: randomPhone,
         phone: randomPhone,
         userName: user.login.username,
       },
-      groupStructureId: getRandomClasses().groupStructure,
-      structureRecordId: getRandomClasses().structureRecord,
+      groupStructureId,
+      structureRecordId,
     }
+
+    const enrollStudent = await academicInstance.enrollStudent(
+      studentPayload,
+      ITAschoolID,
+      campusId
+    )
+
+    console.log(enrollStudent.data)
   }
 }
 
