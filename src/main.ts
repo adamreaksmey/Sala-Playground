@@ -10,6 +10,8 @@ import { __sqlDataManipulator } from './functions/sql/manipulation'
 import SQLMethods from './functions/sql/methods/operations.methods'
 import { MongoClient } from 'mongodb'
 import employeesStaging from '../hr-staging.employees.json'
+import employeeSchema from "../src/services/hr-service/hr-staging.employeeschemas.json"
+import organization from "../src/services/hr-service/hr-staging.organization.json"
 
 type MainFunctionType = () => Promise<void>
 const main: MainFunctionType = async () => {
@@ -32,13 +34,27 @@ const main: MainFunctionType = async () => {
   //   const createSchoolResponse = await instance._post('/academic_service/schools', payload)
   //   console.log(createSchoolResponse.data.data)
 
-  const newEmployees: any = employeesStaging.map((data) => {
-    return {
-      ...data,
-      _id: uuidv4(),
-    }
-  })
+  // ------------ EMPLOYEES ----------------
+  // const newEmployees: any = employeesStaging.map((data) => {
+  //   if (data?.department.campusId == '385a1621-3a0b-45a2-b219-5397dcbaad1a')
+  //     data.department.campusId = '45b5c684-8e17-4a3f-a87d-662bc291ce8f'
+  //   if (data?.department.campusId == 'dafeb565-cfd3-490b-aefc-5c9a78282b2e')
+  //     data.department.campusId = '6b6e0818-76cc-4798-87da-75600f645767'
+  //   if (data?.department.campusId == '93446d8c-854b-4512-b1ec-3be394c66390')
+  //     data.department.campusId = '9899e202-3c52-478c-9845-ba7fbc1cef7f'
+  //   if (data?.department.campusId == '77813d4e-efd9-4015-9030-f221c7355ecc')
+  //     data.department.campusId = 'be8650db-8dfc-4f61-9dbc-90f5a5a973e0'
+  //   if (data?.department.campusId == '74d51238-b94e-4926-862f-3e86bd6271aa')
+  //     data.department.campusId = 'eaaf1680-9bd5-47a9-abb3-a767fee4e098'
+  //   return {
+  //     ...data,
+  //     _id: uuidv4(),
+  //   }
+  // })
 
+  // ------------ EMPLOYEE SCHEMA ----------------
+
+  const newCollection: any = organization
   const mongouri = 'mongodb+srv://adam:UT3BpVvvLZwO4oYX@sala-cluster.uafixpy.mongodb.net/'
   const client = new MongoClient(mongouri)
 
@@ -47,13 +63,15 @@ const main: MainFunctionType = async () => {
     console.log('mongo connected')
 
     const database = client.db('hr-staging')
-    const collection = database.collection('employees')
+    const collection = database.collection('organizations')
 
-    const result = await collection.insertMany(newEmployees)
+    const result = await collection.insertMany(newCollection)
 
     console.log('shit inserted', result)
   } catch (error) {
     console.log(error)
+  } finally {
+    await client.close()
   }
 
   return
