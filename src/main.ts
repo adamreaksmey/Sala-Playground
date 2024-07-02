@@ -61,7 +61,7 @@ const main: MainFunctionType = async () => {
   // })
 
   // ------------ APPLICANT SCHEMA ----------------
-  let newApplicants: any = applicantStep
+  let newApplicants: any = applicantSchema
 
   const newCollection: any = () => {
     let newAppSet: any[] = []
@@ -69,17 +69,21 @@ const main: MainFunctionType = async () => {
     for (const iterator of newApplicants) {
       newAppSet.push({
         ...iterator,
-        // _id: uuidv4(),
+        _id: uuidv4(),
       })
     }
 
     return newAppSet
   }
-
+  _File.reWriter(
+    './src/services/applicant-service/updated/applicant-staging.applicantschema.json',
+    JSON.stringify(newCollection()),
+    false
+  )
   // return console.log(newCollection())
 
   // ------------ MONGO AREA ----------------
-  await mongoInstance.mongoInsertMany(newApplicants(), 'applicant-staging', 'applicants')
+  // await mongoInstance.mongoInsertMany(newApplicants(), 'applicant-staging', 'applicants')
 }
 
 main().catch(console.error)

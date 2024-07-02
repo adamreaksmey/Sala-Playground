@@ -1,0 +1,47 @@
+[{
+  "_id": "SCHOOL#8001ea7c-945c-4b95-81a6-044c67b53a52#APPLICANTSTEP#aa40f08e-c9a6-4728-8c4b-6dbc2918b820",
+  "PK": "SCHOOL#8001ea7c-945c-4b95-81a6-044c67b53a52",
+  "SK": "APPLICANTSTEP#aa40f08e-c9a6-4728-8c4b-6dbc2918b820",
+  "schoolId": "8001ea7c-945c-4b95-81a6-044c67b53a52",
+  "applicantStepId": "pending",
+  "name": "Enrolling",
+  "nameNative": "Registered",
+  "status": false,
+  "filteringCondition": [
+    {
+      "name": "Override conditions for Job Apply",
+      "description": "Override conditions for Job Apply",
+      "eventName": "applicant_applied",
+      "conditions": {
+        "rules": [
+          {
+            "value": "93446d8c-854b-4512-b1ec-3be394c66390",
+            "property": "campus",
+            "op": "eq"
+          },
+          {
+            "value": "b6a00c1d-1dac-4606-b812-f05ba47a7a48",
+            "property": "groupStructure",
+            "op": "eq"
+          }
+        ],
+        "satisfy": "ALL"
+      },
+      "actions": [
+        {
+          "actionName": "move_applicant",
+          "actionParams": "accepted"
+        }
+      ],
+      "active": true,
+      "id": "e7238b69-0a73-4bed-aaa8-a812a4198905",
+      "createdAt": "2024-06-20T06:57:50.892Z"
+    }
+  ],
+  "order": 1,
+  "key": "pending",
+  "needApplicantConfirm": false,
+  "visible": false,
+  "createdAt": "2024-06-20T06:59:45.472Z",
+  "updatedAt": "2024-06-20T07:03:35.614Z"
+}]
