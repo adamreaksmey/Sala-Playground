@@ -1,4 +1,5 @@
 import dotenv from 'dotenv'
+import Https from './functions/http/http'
 dotenv.config()
 /**
  * This is where main functions are performed.
@@ -9,7 +10,8 @@ dotenv.config()
  */
 type MainFunctionType = () => Promise<void>
 const main: MainFunctionType = async () => {
-  
+  const httpInstance = new Https(process.env.SMS_URL_STAGING)
+  // const enrollStudent = 
 }
 
 main().catch(console.error)
