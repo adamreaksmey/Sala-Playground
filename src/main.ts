@@ -125,60 +125,6 @@ const main: MainFunctionType = async () => {
     const uuidUser = uuidv4()
     const { groupStructureId, structureRecordId, campusId } = getRandomClasses()
 
-    // const applicant = {
-    //   applicantStatus: 'pending',
-    //   profile: {
-    //     firstName: user.name.first,
-    //     lastName: user.name.last,
-    //     uniqueKey: idCard,
-    //   },
-    //   enrollToId: uuidv4(),
-    //   enrollToSubject: 'STRUCTURE',
-    //   enrollToDetail: {
-    //     structureRecordId: structureRecordId,
-    //     groupStructureId: groupStructureId,
-    //     // structureId: '49d98257-e995-4537-820b-4ca7e8318eb0',
-    //     // structurePath: '88566f74-e152-45ae-a281-b480feb4d411',
-    //     name: faker.commerce.department(),
-    //     schoolId: ITAschoolID,
-    //     campusId: campusId,
-    //     nameNative: faker.commerce.department(),
-    //     code: generateRandomShits(4),
-    //     description: faker.finance.transactionDescription(),
-    //     enrollableCategory: null,
-    //     schoolType: null,
-    //     photo: null,
-    //     recordType: null,
-    //     qty: null,
-    //     tags: ['Account', 'Morning shift'],
-    //     statistic: {
-    //       countStudent: 0,
-    //       countSubject: 0,
-    //       countTeacher: 0,
-    //     },
-    //     countStructure: null,
-    //     isPromoted: false,
-    //     isFeatured: false,
-    //     isPublic: false,
-    //     isOpen: true,
-    //     startDate: '2023-06-30T17:00:00.000Z',
-    //     endDate: '2023-09-30T16:59:59.000Z',
-    //     extra: null,
-    //     createdAt: '2023-07-31T10:39:18.795Z',
-    //     updatedAt: '2023-07-31T10:39:18.795Z',
-    //   },
-    //   school: {
-    //     name: 'Sala Tech PTE',
-    //     nameNative: 'Sala Tech PTE',
-    //     code: generateRandomShits(4),
-    //     isPublic: 'yes',
-    //   },
-    //   schoolId: ITAschoolID,
-    //   userId: uuidUser,
-    //   idCard: idCard,
-    //   uniqueKey: idCard,
-    // }
-
     const _improvedApplicant = {
       userId: null,
       enrollToId: uuidUser,
