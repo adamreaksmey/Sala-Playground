@@ -1,6 +1,7 @@
 export const data = [
   {
     campusId: '6b6e0818-76cc-4798-87da-75600f645767',
+    campusName: 'NUBB Career Center',
     '8c861554-25cf-4494-865d-74f4bbcb871d': [
       '80f19f8a-5329-4a82-9392-ae598a90ddf7',
       'd183b035-1196-41d1-9ed8-008f56326988',
@@ -8,6 +9,7 @@ export const data = [
   },
   {
     campusId: '9899e202-3c52-478c-9845-ba7fbc1cef7f',
+    campusName: 'NUM Career Center',
     'eb03dd55-0ea5-4a96-9727-d3946e60d906': [
       '0fb94157-c50b-41a3-8efa-37b68008b401',
       'e3a64d69-4623-48c8-bc5f-9dfeae6c0da8',
@@ -67,6 +69,7 @@ export const data = [
   },
   {
     campusId: 'be8650db-8dfc-4f61-9dbc-90f5a5a973e0',
+    campusName: 'USEA Career Center',
     'ba7e2241-7cd3-4340-b544-b5c3bb8e0986': [
       'e036fd40-cbc7-4a79-931c-11de99819a56',
       'a0be8d30-6425-4816-ae0a-83514f2172ec',
@@ -78,10 +81,12 @@ export const data = [
   },
   {
     campusId: 'eaaf1680-9bd5-47a9-abb3-a767fee4e098',
+    campusName: 'SRU Career Center',
     '2cb9b237-bd50-4a47-9261-d56511a1393a': ['907f7120-983a-476d-bafc-7da742134fdd'],
   },
   {
     campusId: 'e4b0a6bf-659d-4daf-9080-aeb5963c7e1e',
+    campusName: 'Institute of Sala',
     '8dbf82de-ab45-4270-91ac-388d40cf9873': [
       '17ce9c5a-79fa-4434-b94b-d9f4fe7c972f',
       '6eadc262-59f8-4b2a-9909-169f785dfba6',
@@ -89,6 +94,7 @@ export const data = [
   },
   {
     campusId: '9899e202-3c52-478c-9845-ba7fbc1cef7f',
+    campusName: 'NUM Career Center',
     '436e704b-b930-4031-ba2a-008ef573f084': [
       'bb52aa73-fa79-44eb-b773-f1b0d8a8fd97',
       '96d190af-803c-4814-af8c-87b5793a1b7f',
@@ -109,6 +115,7 @@ export const data = [
   },
   {
     campusId: 'be8650db-8dfc-4f61-9dbc-90f5a5a973e0',
+    campusName: 'USEA Career Center',
     '6856443f-259a-4b65-b4ed-647f00c5bf70': [
       '8e550ffb-6bb2-495d-9a19-d2d0366899fc',
       '5ee625ec-793f-4000-b655-815baaf3b818',

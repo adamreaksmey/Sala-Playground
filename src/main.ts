@@ -21,6 +21,9 @@ const getRandomClasses = () => {
   // Get the campusId
   const campusId = randomObject.campusId
 
+  // Get the campus name
+  const campusName = randomObject.campusName
+
   // Get the keys of the object, excluding campusId
   const keys = Object.keys(randomObject).filter((key) => key !== 'campusId')
 
@@ -36,6 +39,7 @@ const getRandomClasses = () => {
     groupStructureId: randomKey,
     structureRecordId: randomValue,
     campusId,
+    campusName,
   }
 }
 
@@ -101,16 +105,19 @@ const main: MainFunctionType = async () => {
   //   console.log(enrollStudent.data)
   // }
 
-  for (let i = 0; i < 5; i++) {
+  let count = 0
+  for (let i = 0; i < 50; i++) {
     const randomPhoneIndex = Math.floor(Math.random() * phoneOperators.length)
     const randomPhone = generateByOperator(phoneOperators[randomPhoneIndex])
-    console.log('fetching user')
     const user = await axios({
       url: 'https://randomuser.me/api/',
       method: 'get',
     }).then((data) => {
       return data.data.results[0]
     })
+    const randomGenders = ['male-ប្រុស', 'female-ស្រី']
+    const randomGenderChosen =
+      randomGenders[Math.floor(Math.random() * randomGenders.length)]
 
     const idCard = await httpInstance
       ._get('/products_service/id/generator?prefix=IBF&type=sku')
@@ -118,72 +125,72 @@ const main: MainFunctionType = async () => {
     const uuidUser = uuidv4()
     const { groupStructureId, structureRecordId, campusId } = getRandomClasses()
 
-    const applicant = {
-      applicantStatus: 'pending',
-      profile: {
-        firstName: user.name.first,
-        lastName: user.name.last,
-        uniqueKey: idCard,
-      },
-      enrollToId: uuidv4(),
-      enrollToSubject: 'STRUCTURE',
-      enrollToDetail: {
-        structureRecordId: structureRecordId,
-        groupStructureId: groupStructureId,
-        // structureId: '49d98257-e995-4537-820b-4ca7e8318eb0',
-        // structurePath: '88566f74-e152-45ae-a281-b480feb4d411',
-        name: faker.commerce.department(),
-        schoolId: ITAschoolID,
-        campusId: campusId,
-        nameNative: faker.commerce.department(),
-        code: generateRandomShits(4),
-        description: faker.finance.transactionDescription(),
-        enrollableCategory: null,
-        schoolType: null,
-        photo: null,
-        recordType: null,
-        qty: null,
-        tags: ['Account', 'Morning shift'],
-        statistic: {
-          countStudent: 0,
-          countSubject: 0,
-          countTeacher: 0,
-        },
-        countStructure: null,
-        isPromoted: false,
-        isFeatured: false,
-        isPublic: false,
-        isOpen: true,
-        startDate: '2023-06-30T17:00:00.000Z',
-        endDate: '2023-09-30T16:59:59.000Z',
-        extra: null,
-        createdAt: '2023-07-31T10:39:18.795Z',
-        updatedAt: '2023-07-31T10:39:18.795Z',
-      },
-      school: {
-        name: 'Sala Tech PTE',
-        nameNative: 'Sala Tech PTE',
-        code: generateRandomShits(4),
-        isPublic: 'yes',
-      },
-      schoolId: ITAschoolID,
-      userId: uuidUser,
-      idCard: idCard,
-      uniqueKey: idCard,
-    }
+    // const applicant = {
+    //   applicantStatus: 'pending',
+    //   profile: {
+    //     firstName: user.name.first,
+    //     lastName: user.name.last,
+    //     uniqueKey: idCard,
+    //   },
+    //   enrollToId: uuidv4(),
+    //   enrollToSubject: 'STRUCTURE',
+    //   enrollToDetail: {
+    //     structureRecordId: structureRecordId,
+    //     groupStructureId: groupStructureId,
+    //     // structureId: '49d98257-e995-4537-820b-4ca7e8318eb0',
+    //     // structurePath: '88566f74-e152-45ae-a281-b480feb4d411',
+    //     name: faker.commerce.department(),
+    //     schoolId: ITAschoolID,
+    //     campusId: campusId,
+    //     nameNative: faker.commerce.department(),
+    //     code: generateRandomShits(4),
+    //     description: faker.finance.transactionDescription(),
+    //     enrollableCategory: null,
+    //     schoolType: null,
+    //     photo: null,
+    //     recordType: null,
+    //     qty: null,
+    //     tags: ['Account', 'Morning shift'],
+    //     statistic: {
+    //       countStudent: 0,
+    //       countSubject: 0,
+    //       countTeacher: 0,
+    //     },
+    //     countStructure: null,
+    //     isPromoted: false,
+    //     isFeatured: false,
+    //     isPublic: false,
+    //     isOpen: true,
+    //     startDate: '2023-06-30T17:00:00.000Z',
+    //     endDate: '2023-09-30T16:59:59.000Z',
+    //     extra: null,
+    //     createdAt: '2023-07-31T10:39:18.795Z',
+    //     updatedAt: '2023-07-31T10:39:18.795Z',
+    //   },
+    //   school: {
+    //     name: 'Sala Tech PTE',
+    //     nameNative: 'Sala Tech PTE',
+    //     code: generateRandomShits(4),
+    //     isPublic: 'yes',
+    //   },
+    //   schoolId: ITAschoolID,
+    //   userId: uuidUser,
+    //   idCard: idCard,
+    //   uniqueKey: idCard,
+    // }
 
     const _improvedApplicant = {
       userId: null,
-      enrollToId: 'e4b0a6bf-659d-4daf-9080-aeb5963c7e1e',
+      enrollToId: uuidUser,
       enrollToSubject: 'CAMPUS',
       enrollToDetail: {
-        campusId: 'e4b0a6bf-659d-4daf-9080-aeb5963c7e1e',
-        schoolId: '8001ea7c-945c-4b95-81a6-044c67b53a52',
-        name: 'Institute of Testing and Assurance',
-        nameNative: 'Institute of Testing and Assurance',
-        code: 'ITA',
-        phone: '123456789',
-        email: 'admin@ita.com',
+        campusId: campusId,
+        schoolId: ITAschoolID,
+        name: getRandomClasses().campusName,
+        nameNative: getRandomClasses().campusName,
+        code: 'SALA',
+        phone: randomPhone,
+        email: 'admin@sala.com',
         photo: 'https://files.sala.tech/share/mzJAm2CW4yyZkIKN',
         map: null,
         address: null,
@@ -196,12 +203,12 @@ const main: MainFunctionType = async () => {
         isCampus: true,
       },
       profile: {
-        phone: '85511727387',
-        lastName: 'Joseph Jackson',
-        firstName: 'Michael',
-        gender: 'male-ប្រុស',
+        phone: randomPhone,
+        lastName: user.name.last,
+        firstName: user.name.first,
+        gender: randomGenderChosen,
         '58a56707-e0c3-4f56-a611-d8458795b825': '2024',
-        email: 'jackson@family.com',
+        email: user.email,
         'dfc4c73b-6cce-4c0e-a93d-30629e638bd8': null,
         'e5db7128-0eb8-4dac-bcf6-2f5d756cc1c0': 'yes-បាទ-ចាស',
         '78a56707-e0c3-4f56-a611-d8458795b825': [
@@ -221,19 +228,24 @@ const main: MainFunctionType = async () => {
         cityProvinceYouAreFrom: '2',
         'fc6412e4-6c92-46ed-a67e-9b5d8440f46e': '5',
         '70a0a9e1-2a7d-4e1d-b4e7-aef6dcf93ab0': ['english', 'other'],
-        uniqueKey: '85511727387',
+        uniqueKey: idCard,
       },
       school: {
         name: 'Sala Tech',
         nameNative: 'Sala Tech',
         code: 'SALA',
-        schoolId: '8001ea7c-945c-4b95-81a6-044c67b53a52',
+        schoolId: ITAschoolID,
       },
-      schoolId: '8001ea7c-945c-4b95-81a6-044c67b53a52',
+      schoolId: ITAschoolID,
     }
 
-    const registerApp = await applicantInstance.registerApplicant(applicant, ITAschoolID)
-    console.log(registerApp)
+    const registerApp = await applicantInstance.registerApplicant(
+      _improvedApplicant,
+      ITAschoolID
+    )
+    console.log(registerApp.data)
+    count++
+    console.log(count)
   }
 }
 
