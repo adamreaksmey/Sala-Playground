@@ -56,3 +56,37 @@ CREATE TRIGGER skip_duplicated_record
 BEFORE INSERT ON public.user
 FOR EACH ROW
 EXECUTE FUNCTION check_row_exists();
+
+-- Random column text
+CREATE OR REPLACE FUNCTION randomize_case_preserved(input_text TEXT) RETURNS TEXT AS $$
+DECLARE
+    len INT;
+    shuffled TEXT := '';
+    i INT;
+    char TEXT;
+    random_pos INT;
+    original_case CHAR;
+    remaining_chars TEXT := input_text;
+BEGIN
+    len := length(input_text);
+    FOR i IN 1..len LOOP
+        -- Randomly pick a character from the remaining characters
+        random_pos := floor(random() * length(remaining_chars)) + 1;
+        char := substr(remaining_chars, random_pos, 1);
+        -- Remove the picked character from the remaining characters
+        remaining_chars := overlay(remaining_chars placing '' from random_pos for 1);
+        
+        -- Preserve the case of the character
+        original_case := substr(input_text, i, 1);
+        IF original_case ~ '[A-Z]' THEN
+            char := upper(char);
+        ELSE
+            char := lower(char);
+        END IF;
+        
+        -- Append the randomized character to the shuffled string
+        shuffled := shuffled || char;
+    END LOOP;
+    RETURN shuffled;
+END;
+$$ LANGUAGE plpgsql;
