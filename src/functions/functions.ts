@@ -60,3 +60,12 @@ export const generateRandomShits = (length: number = 8): string => {
 
   return password
 }
+
+/**
+ *
+ * @param arr
+ * @returns {number}
+ */
+export const randomIndexBasedOnArray = (arr: any[]): number => {
+  return Math.floor(Math.random() * arr.length)
+}
