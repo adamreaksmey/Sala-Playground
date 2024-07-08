@@ -66,6 +66,6 @@ export const generateRandomShits = (length: number = 8): string => {
  * @param arr
  * @returns {number}
  */
-export const randomIndexBasedOnArray = (arr: any[]): number => {
+export const randomIndexBasedOnArray = (arr: any[]): any => {
   return arr[Math.floor(Math.random() * arr.length)]
 }

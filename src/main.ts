@@ -2,228 +2,105 @@ dotenv.config()
 import dotenv from 'dotenv'
 import Https from './functions/http/http'
 import student from './services/followup-service/data/student'
+import employees from './services/followup-service/data/employees'
 import { randomIndexBasedOnArray } from './functions/functions'
+import { faker } from '@faker-js/faker'
 
 type MainFunctionType = () => Promise<void>
 const main: MainFunctionType = async () => {
   const httpInstance = new Https(process.env.SMS_URL_STAGING)
-  const students = student.data
 
-  console.log("random student", randomIndexBasedOnArray(students))
-  
-  const followupPayload = {
-    name: 'adasdsadsad',
-    followUpOn: [
-      {
-        participantId: '76543097-9a70-4b86-b1a3-c5da1ae92898',
-        participantIdCard: '0987654323',
-        firstName: '0987654323',
-        lastName: '0987654323',
-        firstNameNative: null,
-        lastNameNative: null,
-        phone: '0987654323',
-        gender: null,
-        uniqueKey: '0987654323',
-        idCard: '0987654323',
-        type: 'student',
+  for (let i = 0; i < 30; i++) {
+    const students = randomIndexBasedOnArray(student.data)
+    const teachers = randomIndexBasedOnArray(employees.data)
+
+    const followupPayload = {
+      name: faker.lorem.lines({ min: 1, max: 3 }),
+      followUpOn: [
+        {
+          participantId: students.studentId,
+          participantIdCard: students.idCard,
+          firstName: students.firstName,
+          lastName: students.lastName,
+          firstNameNative: students.firstNameNative,
+          lastNameNative: students.lastNameNative,
+          phone: students.profile.profile.phone,
+          gender: students.gender,
+          uniqueKey: students.uniqueKey,
+          idCard: students.idCard,
+          type: 'student',
+        },
+      ],
+      date: faker.date.anytime(),
+      // Can include students and teachers.
+      participants: [
+        {
+          participantId: students.studentId,
+          participantIdCard: students.idCard,
+          firstName: students.firstName,
+          lastName: students.lastName,
+          firstNameNative: students.firstNameNative,
+          lastNameNative: students.lastNameNative,
+          phone: students.profile.profile.phone,
+          gender: students.gender,
+          email: faker.internet.email(),
+          type: 'student',
+        },
+        {
+          participantId: teachers._id,
+          participantIdCard: teachers.idCard,
+          firstName: teachers.firstName,
+          lastName: teachers.lastName,
+          firstNameNative: teachers.firstNameNative,
+          lastNameNative: teachers.lastNameNative,
+          phone: teachers.phone,
+          gender: teachers.gender,
+          email: teachers.email,
+          type: 'teacher',
+        },
+      ],
+      status: 'Default',
+      situation: 'situation1',
+      problem: 'adasdsadsad',
+      document: [],
+      profile: '',
+      content: '',
+      reportBy: [
+        {
+          participantId: '76734bc7-946a-4fe7-9a2d-a68753dd99e6',
+          userName: 'admin-demo@sala',
+          firstName: 'Super',
+          email: 'admin.demo@sala.co',
+          keycloakUserId: '6038e409-72a6-47bf-a002-4e1e1c5b2441',
+          type: 'teacher',
+        },
+      ],
+      startDate: faker.date.anytime(),
+      endDate: faker.date.anytime(),
+      followUpBy: [
+        {
+          participantId: '76734bc7-946a-4fe7-9a2d-a68753dd99e6',
+          userName: 'admin-demo@sala',
+          firstName: 'Super',
+          email: 'admin.demo@sala.co',
+          keycloakUserId: '6038e409-72a6-47bf-a002-4e1e1c5b2441',
+          type: 'teacher',
+        },
+      ],
+      notification: {
+        email: [],
+        title: 'New Case in Follow up',
+        description: 'new case',
       },
-    ],
-    date: '2024-07-30T09:55:52+07:00',
-    // Can include students and teachers.
-    participants: [
-      {
-        participantId: '6c5a4ebb-ed7e-4c8d-a68a-96d26604e358',
-        participantIdCard: 'new',
-        firstName: 'new',
-        lastName: 'new',
-        firstNameNative: 'new',
-        lastNameNative: 'new',
-        phone: '0999999999',
-        gender: 'male',
-        email: 'new@gmail.com',
-        type: 'teacher',
-      },
-      {
-        participantId: '707d045a-3308-4c5f-baba-3daf67eb7d2e',
-        participantIdCard: '150624',
-        firstName: 'Chheng3',
-        lastName: 'Mouy3',
-        firstNameNative: 'Chheng3',
-        lastNameNative: 'Mouy3',
-        phone: '777262518',
-        gender: 'male',
-        email: 'chheng.mouy2@gmail.com',
-        type: 'teacher',
-      },
-      {
-        participantId: '76543097-9a70-4b86-b1a3-c5da1ae92898',
-        participantIdCard: '0987654323',
-        firstName: '0987654323',
-        lastName: '0987654323',
-        firstNameNative: null,
-        lastNameNative: null,
-        phone: '0987654323',
-        gender: null,
-        uniqueKey: '0987654323',
-        type: 'student',
-      },
-      {
-        participantId: '0f918d33-e8af-4d00-8e9c-b511a47dea85',
-        participantIdCard: '0987654321',
-        firstName: '0987654321',
-        lastName: '0987654321',
-        firstNameNative: null,
-        lastNameNative: null,
-        phone: '0987654321',
-        gender: null,
-        uniqueKey: '0987654321',
-        type: 'student',
-      },
-    ],
-    status: 'Default',
-    situation: 'situation1',
-    problem: 'adasdsadsad',
-    document: [],
-    profile: '',
-    content: '',
-    reportBy: [
-      {
-        participantId: '2f452ccd-01e0-4bd3-a06e-f29226b8a42f',
-        userName: 'superadmin@dev',
-        firstName: 'Admin',
-        email: 'admin@mail.com',
-        keycloakUserId: '7100ebdf-f7b9-4e6c-b803-2c1565677996',
-        type: 'teacher',
-      },
-    ],
-    startDate: '2024-07-30T09:55:52+07:00',
-    endDate: '2024-07-30T09:55:52+07:00',
-    followUpBy: [
-      {
-        participantId: '2f452ccd-01e0-4bd3-a06e-f29226b8a42f',
-        userName: 'superadmin@dev',
-        firstName: 'Admin',
-        email: 'admin@mail.com',
-        keycloakUserId: '7100ebdf-f7b9-4e6c-b803-2c1565677996',
-        type: 'teacher',
-      },
-    ],
-    notification: {
-      email: [],
-      title: 'New Case in Follow up',
-      description: 'new case',
-    },
+    }
+
+    const responseFollowup: any = httpInstance._post(
+      `followup_service/schools/${process.env.PSE_STAGING}/topic`,
+      followupPayload
+    )
+
+    console.log('Response success!', i, responseFollowup.data)
   }
-  //   for (let i = 0; i < 100; i++) {
-  //     const followupPayload = {
-  //       name: 'adasdsadsad',
-  //       followUpOn: [
-  //         {
-  //           participantId: '76543097-9a70-4b86-b1a3-c5da1ae92898',
-  //           participantIdCard: '0987654323',
-  //           firstName: '0987654323',
-  //           lastName: '0987654323',
-  //           firstNameNative: null,
-  //           lastNameNative: null,
-  //           phone: '0987654323',
-  //           gender: null,
-  //           uniqueKey: '0987654323',
-  //           idCard: '0987654323',
-  //           type: 'student',
-  //         },
-  //       ],
-  //       date: '2024-07-30T09:55:52+07:00',
-  //       // Can include students and teachers.
-  //       participants: [
-  //         {
-  //           participantId: '6c5a4ebb-ed7e-4c8d-a68a-96d26604e358',
-  //           participantIdCard: 'new',
-  //           firstName: 'new',
-  //           lastName: 'new',
-  //           firstNameNative: 'new',
-  //           lastNameNative: 'new',
-  //           phone: '0999999999',
-  //           gender: 'male',
-  //           email: 'new@gmail.com',
-  //           type: 'teacher',
-  //         },
-  //         {
-  //           participantId: '707d045a-3308-4c5f-baba-3daf67eb7d2e',
-  //           participantIdCard: '150624',
-  //           firstName: 'Chheng3',
-  //           lastName: 'Mouy3',
-  //           firstNameNative: 'Chheng3',
-  //           lastNameNative: 'Mouy3',
-  //           phone: '777262518',
-  //           gender: 'male',
-  //           email: 'chheng.mouy2@gmail.com',
-  //           type: 'teacher',
-  //         },
-  //         {
-  //           participantId: '76543097-9a70-4b86-b1a3-c5da1ae92898',
-  //           participantIdCard: '0987654323',
-  //           firstName: '0987654323',
-  //           lastName: '0987654323',
-  //           firstNameNative: null,
-  //           lastNameNative: null,
-  //           phone: '0987654323',
-  //           gender: null,
-  //           uniqueKey: '0987654323',
-  //           type: 'student',
-  //         },
-  //         {
-  //           participantId: '0f918d33-e8af-4d00-8e9c-b511a47dea85',
-  //           participantIdCard: '0987654321',
-  //           firstName: '0987654321',
-  //           lastName: '0987654321',
-  //           firstNameNative: null,
-  //           lastNameNative: null,
-  //           phone: '0987654321',
-  //           gender: null,
-  //           uniqueKey: '0987654321',
-  //           type: 'student',
-  //         },
-  //       ],
-  //       status: 'Default',
-  //       situation: 'situation1',
-  //       problem: 'adasdsadsad',
-  //       document: [],
-  //       profile: '',
-  //       content: '',
-  //       reportBy: [
-  //         {
-  //           participantId: '2f452ccd-01e0-4bd3-a06e-f29226b8a42f',
-  //           userName: 'superadmin@dev',
-  //           firstName: 'Admin',
-  //           email: 'admin@mail.com',
-  //           keycloakUserId: '7100ebdf-f7b9-4e6c-b803-2c1565677996',
-  //           type: 'teacher',
-  //         },
-  //       ],
-  //       startDate: '2024-07-30T09:55:52+07:00',
-  //       endDate: '2024-07-30T09:55:52+07:00',
-  //       followUpBy: [
-  //         {
-  //           participantId: '2f452ccd-01e0-4bd3-a06e-f29226b8a42f',
-  //           userName: 'superadmin@dev',
-  //           firstName: 'Admin',
-  //           email: 'admin@mail.com',
-  //           keycloakUserId: '7100ebdf-f7b9-4e6c-b803-2c1565677996',
-  //           type: 'teacher',
-  //         },
-  //       ],
-  //       notification: {
-  //         email: [],
-  //         title: 'New Case in Follow up',
-  //         description: 'new case',
-  //       },
-  //     }
-
-  //     // const responseFollowup = await httpInstance._post(
-  //     //   `followup_service/schools/${process.env.PSE_STAGING}/topic`,
-  //     //   followupPayload
-  //     // )
-  //   }
 }
 
 main().catch(console.error)
