@@ -2,13 +2,15 @@ dotenv.config()
 import dotenv from 'dotenv'
 import Https from './functions/http/http'
 import student from './services/followup-service/data/student'
+import { randomIndexBasedOnArray } from './functions/functions'
 
 type MainFunctionType = () => Promise<void>
 const main: MainFunctionType = async () => {
   const httpInstance = new Https(process.env.SMS_URL_STAGING)
   const students = student.data
 
-
+  console.log("random student", randomIndexBasedOnArray(students))
+  
   const followupPayload = {
     name: 'adasdsadsad',
     followUpOn: [

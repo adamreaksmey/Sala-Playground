@@ -41,8 +41,8 @@ export const hasKey = (_obj: object, _key: string): boolean => {
 
 /**
  * Can be used to generate random shits.
- * @param length 
- * @returns 
+ * @param length
+ * @returns
  */
 export const generateRandomShits = (length: number = 8): string => {
   const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -59,4 +59,13 @@ export const generateRandomShits = (length: number = 8): string => {
   }
 
   return password
+}
+
+/**
+ *
+ * @param arr
+ * @returns {number}
+ */
+export const randomIndexBasedOnArray = (arr: any[]): number => {
+  return arr[Math.floor(Math.random() * arr.length)]
 }
