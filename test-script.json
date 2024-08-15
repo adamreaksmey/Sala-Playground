@@ -1,0 +1,28 @@
+{
+  "config": {
+    "target": "http://127.0.0.1:8000",
+    "phases": [
+      {
+        "duration": 60,
+        "arrivalRate": 10
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "flow": [
+        {
+          "post": {
+            "url": "/api/products_service/27c0b377-f28e-4ba1-afb9-5eaed02fee6c/upload",
+            "formData": {
+              "name": "::testing::",
+              "extension": "png",
+              "parent_id": "27c0b377-f28e-4ba1-afb9-5eaed02fee6c",
+              "file": "./ramanujan.png"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
