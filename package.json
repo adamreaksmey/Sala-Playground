@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "@faker-js/faker": "^8.4.1",
+    "artillery": "^2.0.19",
     "axios": "^1.7.2",
     "cambodia-phone-generator": "^1.0.2",
     "dotenv": "^16.4.5",
