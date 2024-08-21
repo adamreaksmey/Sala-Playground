@@ -3,6 +3,7 @@ import SQLgenerator from './functions/sql/generator'
 import { __sqlDataManipulator } from './functions/sql/manipulation'
 import _File from './functions/files/functions'
 import school from './../AcademicSchoolsTable-prod'
+import enrollableSubjects from './../EnrollableSubjectsTable-prod'
 
 dotenv.config()
 /**
