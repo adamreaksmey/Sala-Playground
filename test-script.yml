@@ -1,11 +1,11 @@
 config:
   target: "http://127.0.0.1:8000"
   phases:
-    - duration: 60
-      arrivalRate: 10
+    - duration: 30
+      arrivalRate: 15
   out: "./artillery-results"
   log: 
-    level: "info"  # Log level (use "debug" for more detailed logging)
+    level: "debug"  # Log level (use "debug" for more detailed logging)
     output: "artillery.log"  # Log file name
 
 scenarios:

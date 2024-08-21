@@ -22,17 +22,25 @@ formData.append('file', fs.createReadStream(filePath))
 
 const main: MainFunctionType = async () => {
   try {
-    const response = await axios({
-      baseURL: 'http://127.0.0.1:8000',
-      url: `/api/products_service/${ORGID}/upload`,
-      method: 'POST',
-      data: formData,
-      headers: formData.getHeaders(),
-    })
+    for (let i = 0; i < 100; i++) {
+      const formData = new FormData() // Recreate formData for each iteration
+      formData.append('file', fs.createReadStream('ramanujan.png')) // Example file
+      formData.append('name', '::testing::')
+      formData.append('extension', 'png')
+      formData.append('parent_id', '27c0b377-f28e-4ba1-afb9-5eaed02fee6c')
 
-    console.log('response', response.data) // Log the response data
+      const response = await axios({
+        baseURL: 'http://127.0.0.1:8000',
+        url: `/api/products_service/${ORGID}/upload`,
+        method: 'POST',
+        data: formData,
+        headers: formData.getHeaders(),
+      })
+
+      console.log('response', response.data)
+    }
   } catch (error) {
-    console.error('Error uploading file', error)
+    console.error('Error during the request loop:', error)
   }
 }
 
