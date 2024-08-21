@@ -1,7 +1,7 @@
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3><strong>ចំណុចពិសេសទាំង៣របស់សាកលវិទ្យាល័យអាស៊ីអ៊ឺរ៉ុប</strong></h3>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h3><strong>ចំណុចពិសេសទាំង៣របស់សាកលវិទ្យាល័យអាស៊ីអ៊ឺរ៉ុប</strong></h3>
 
 <ul>
 	<li><strong>មានសណ្ធាគារ និងអគារសម្រាប់វគ្គសិក្សា៖</strong> សាកលវិទ្យាល័យអាស៊ីអ៊ឺរ៉ុបផ្ដល់ជូននិស្សិតនូវសណ្ធាគារ និងអគារពិតប្រាកដ ដើម្បីឲ្យនិស្សិតមានបទពិសោធន៍ធ្វើការនៅក្នុងជំនាញរៀងៗខ្លួន។</li>
@@ -9,8 +9,8 @@ INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3><s
 	<li><strong>Cisco Telepresence៖</strong> សាកលវិទ្យាល័យអាស៊ីអ៊ឺរ៉ុបមានបន្ទប់បច្ចេកវិទ្យាបំពាក់ដោយឧបករណ៍ទំនើប ដែលអនុញ្ញាតឲ្យនិស្សិត និងបុគ្គលិក មានឱកាសសិក្សា និងបង្រៀនតាមរយៈវីដេអូរពីក្រៅប្រទេស។</li>
 </ul>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h1><span style="font-size:18px"><strong>បាវចនា</strong></span></h1>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h1><span style="font-size:18px"><strong>បាវចនា</strong></span></h1>
 
 <p>បាវចនារបស់វិទ្យាស្ថានវិទ្យាសាស្ត្រអាសុី:</p>
 
@@ -20,7 +20,7 @@ INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h1><s
 	<li><strong>រុងរឿង</strong>: គោលបំណងសំខាន់បំផុតរបស់វិទ្យាស្ថាន គឺផ្ដល់ការអប់រំ និង ការបណ្ដុះបណ្ដាល ជូនមនុស្សគ្រប់រូបដោយមិនប្រកាន់ជាតិសាសន៍ និន្នាការនយោបាយ កំរិតជីវភាព ភេទ និង ពណ៌សម្បុរ ដើម្បីជាមូលដ្ឋានគ្រឹះនៃការប្រកបអាជីព ដោយរុងរឿងសំរាប់បុគ្គល គ្រួសារ សង្គម ប្រទេសជាតិ និង សាកលលោក។</li>
 </ul>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h1><strong><span style="font-size:18px">គោលដៅ</span></strong></h1>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h1><strong><span style="font-size:18px">គោលដៅ</span></strong></h1>
 
 <ul>
 	<li>ពង្រីកវិសាលភាពនៃការបណ្ដុះបណ្តាលជំនាញបច្ចេកទេស និងវិជ្ជាជីវៈ ឱ្យឆ្លើយតបទៅនឹងសេចក្តីត្រូវការរបស់ទីផ្សារការងារ</li>
@@ -28,9 +28,9 @@ INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h1><s
 	<li>លើកកម្ពស់ជីវភាពរបស់អ្នកទទួលការបណ្ដុះបណ្តាល តាមរយៈការប្រើប្រាស់សមត្ថភាពជំនាញបច្ចេកទេស និងវិជ្ជាជីវៈ</li>
 </ul>
 ', 'inactive');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<p><strong>បីចំណុចដែលធ្វើឱ្យសាខាសាកលវិទ្យាល័យ គ្រប់គ្រងនិងសេដ្ឋកិច្ច ខេត្តព្រះសីហនុមានភាពលេចធ្លោ</strong></p>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<p><strong>បីចំណុចដែលធ្វើឱ្យសាខាសាកលវិទ្យាល័យ គ្រប់គ្រងនិងសេដ្ឋកិច្ច ខេត្តព្រះសីហនុមានភាពលេចធ្លោ</strong></p>
 
 <ul>
 	<li>សាកលវិទ្យាល័យល្អបំផុតដែលផ្តោតលើការគ្រប់គ្រង និងសេដ្ឋកិច្ច។</li>
@@ -38,8 +38,8 @@ INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<p><st
 	<li>លើកទឹកចិត្តសិស្សឱ្យចូលរួមចំណែកក្នុងប្រទេស និងអន្តរជាតិ។</li>
 </ul>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3><strong>ចំណុចពិសេសរបស់សាកលវិទ្យាល័យបច្ចេកវិទ្យា និងវិទ្យាសាស្រ្តកម្ពុជា</strong></h3>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h3><strong>ចំណុចពិសេសរបស់សាកលវិទ្យាល័យបច្ចេកវិទ្យា និងវិទ្យាសាស្រ្តកម្ពុជា</strong></h3>
 
 <p><strong>1. ទទួលបានបរិញ្ញាប័ត្រ ក្នុងនិងក្រៅប្រទេស</strong></p>
 
@@ -47,11 +47,11 @@ INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3><s
 
 <p><strong>3. កម្មវិធីសិក្សាត្រៀមសិស្ស ដើម្បីរកការងារ</strong></p>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<p>តាមរយៈសាឡា សិស្សវិទ្យាល័យក្នុងប្រទេសកម្ពុជាអាចស្វែងរកដំបូន្មាន និងការណែនាំ ហើយធ្វើតេស្ដដើម្បីរកឱ្យឃើញនូវអ្វីដែលស័ក្តិសមបំផុតសម្រាប់អាជីពចម្បង និងវិជ្ជាជីវៈរបស់ពួកគេ។ សិស្សអាចចូលប្រើព័ត៌មានបានយ៉ាងងាយស្រួល ប្រៀបធៀប និងស្វែងរកការផ្តល់ជូនដ៏ល្អបំផុតពីអ្នកផ្តល់សេវាមហាវិទ្យាល័យនីមួយៗ។ ជាងនេះទៅទៀត សិស្សានុសិស្សអាចទទួលបានព័ត៌មាន និងបណ្តាញដ៏មានតម្លៃ ដើម្បីធ្វើឱ្យការសិក្សាក្លាយជាបទពិសោធន៍ដ៏រីករាយ ខណៈពេលដែលភ្ជាប់ពួកគេទៅនឹងឱកាសដ៏ត្រឹមត្រូវសម្រាប់អាជីពនាពេលអនាគតរបស់ពួកគេ។</p>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<p>តាមរយៈសាឡា សិស្សវិទ្យាល័យក្នុងប្រទេសកម្ពុជាអាចស្វែងរកដំបូន្មាន និងការណែនាំ ហើយធ្វើតេស្ដដើម្បីរកឱ្យឃើញនូវអ្វីដែលស័ក្តិសមបំផុតសម្រាប់អាជីពចម្បង និងវិជ្ជាជីវៈរបស់ពួកគេ។ សិស្សអាចចូលប្រើព័ត៌មានបានយ៉ាងងាយស្រួល ប្រៀបធៀប និងស្វែងរកការផ្តល់ជូនដ៏ល្អបំផុតពីអ្នកផ្តល់សេវាមហាវិទ្យាល័យនីមួយៗ។ ជាងនេះទៅទៀត សិស្សានុសិស្សអាចទទួលបានព័ត៌មាន និងបណ្តាញដ៏មានតម្លៃ ដើម្បីធ្វើឱ្យការសិក្សាក្លាយជាបទពិសោធន៍ដ៏រីករាយ ខណៈពេលដែលភ្ជាប់ពួកគេទៅនឹងឱកាសដ៏ត្រឹមត្រូវសម្រាប់អាជីពនាពេលអនាគតរបស់ពួកគេ។</p>
 ', 'inactive');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h1><span style="font-size:18px"><strong>គោលដៅ</strong></span></h1>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h1><span style="font-size:18px"><strong>គោលដៅ</strong></span></h1>
 
 <p>ដើម្បីសម្រេចបាន​ នូវចក្ចុវិស័យខាងលើ សាកលវិទ្យាល័យ, ហេង សំរិន ត្បូងឃ្មុំ​ មានបេសកម្មដែលត្រូវបំពេញ​ ៣​សំខាន់ដូចខាងក្រោម</p>
 
@@ -61,14 +61,14 @@ INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h1><s
 	<li>ជាគ្រឺះស្ថានគំរូ ខាងការបម្រើសេវាកម្មសហគមន៏ និងពិគ្រោះយោបល់ដល់សហគ្រាសនានា ដៃគូ និងវិស័យកសិកម្ម។</li>
 </ol>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3><strong>ចំណុចពិសេសទាំង៣របស់សាកលវិទ្យាល័យបញ្ញាជាតិ</strong></h3>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h3><strong>ចំណុចពិសេសទាំង៣របស់សាកលវិទ្យាល័យបញ្ញាជាតិ</strong></h3>
 
 <ul>
 	<li>មានអគារផ្ទាល់ខ្លួនចំនួន៣</li>
@@ -80,7 +80,7 @@ INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3><s
 
 <p>&nbsp;</p>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3><strong>ចំណុចពិសេសទាំង៣របស់វិទ្យាស្ថាន អេសធី ខ្លេម៉ិនស៍</strong></h3>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h3><strong>ចំណុចពិសេសទាំង៣របស់វិទ្យាស្ថាន អេសធី ខ្លេម៉ិនស៍</strong></h3>
 
 <ul>
 	<li><strong>ថ្នាក់ឌីជីថល:</strong> នៅវិទ្យាស្ថាន អេសធី ខ្លេម៉ិនស៍ យើងបានបង្កើនថ្នាក់គ្រូបង្រៀនធម្មតា ជាមួយបន្ទប់រៀនឌីជីថលដើម្បីធ្វើឱ្យសិស្សងាយស្រួលក្នុងការទទួលបានចំណេះដឹង និងសម្ភារៈសិក្សាពីថ្នាក់រៀនតាមរយៈឧបករណ៍អ៊ិនធឺណិតដែលមានភ្ជាប់ដូចជាកុំព្យូទ័រយួរដៃកុំព្យូទ័រ ថេប្លេតឬទូរស័ព្ទចល័ត។</li>
@@ -104,9 +104,9 @@ INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3><s
 
 <p>&nbsp;</p>
 ', 'inactive');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<p><strong>ចំណុចពិសេសទាំង៣របស់សាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ</strong></p>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<p><strong>ចំណុចពិសេសទាំង៣របស់សាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ</strong></p>
 
 <ul>
 	<li><strong>មានច្រើនជាង៣០ដេប៉ាតឺម៉ង់៖</strong> សាកលវិទ្យាល័យភូមិន្ទភ្នំពេញផ្ដល់ជូននិស្សិតនូវជម្រើសសិក្សាជាច្រើនដេប៉ាតឺម៉ង់ ដែលស្ថិតក្រោមមហាវិទ្យាល័យចំនួន៦។</li>
@@ -114,32 +114,32 @@ INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<p><st
 	<li><strong>បរិយាកាសស្រស់បំព្រង៖</strong> សាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ មានទីធ្លាហ៊ុំព័ទ្ធដោយព្រៃធម្មជាតិ និងដើមឈើជាច្រើនប្រភេទ ដែលនាំមកនូវភាពស្រស់ស្អាត និងស្រស់ស្រាយ។</li>
 </ul>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<p>- គ្រូដែលមានបទពិសោធន៍<br />
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<p>- គ្រូដែលមានបទពិសោធន៍<br />
 - ផ្តោតលើការបណ្តុះបណ្តាលគុណភាព<br />
 - អនុវត្តជាក់ស្តែង និងអនុវត្តជាមួយការងារជាក់ស្តែង</p>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<p>តម្រូវការតាមទីផ្សារការងារៈ កម្មវិធីសិក្សាធ្វើឡើងតាមតម្រូវការទីផ្សារការងារ​ ដើម្បីធានាក្រោយបញ្ចប់ការសិក្សាពួកគាត់មានជំនាញ​ និងវិធីសាស្ត្រនានាសំរាប់ធ្វើការងារ។ កិច្ចសហការយ៉ាងជិតស្និទ្ធនេះធានាឱ្យនិស្សិតបញ្ចប់ការសិក្សាត្រៀមខ្លួនដើម្បីឈានទៅដល់វិស័យការងារដែលពួកគេចង់បាន។<br />
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<p>តម្រូវការតាមទីផ្សារការងារៈ កម្មវិធីសិក្សាធ្វើឡើងតាមតម្រូវការទីផ្សារការងារ​ ដើម្បីធានាក្រោយបញ្ចប់ការសិក្សាពួកគាត់មានជំនាញ​ និងវិធីសាស្ត្រនានាសំរាប់ធ្វើការងារ។ កិច្ចសហការយ៉ាងជិតស្និទ្ធនេះធានាឱ្យនិស្សិតបញ្ចប់ការសិក្សាត្រៀមខ្លួនដើម្បីឈានទៅដល់វិស័យការងារដែលពួកគេចង់បាន។<br />
 <br />
 ជំរុញការសិក្សាៈ យើងបន្តរកវិធីសាស្ត្របង្រៀនថ្មីៗដើម្បីឆ្លើយតបពេលវេលា និងបរិបទការសិក្សា។ នៅក្នុងថ្នាក់រៀននិស្សិតចូលរួមពិភាក្សាគ្នាយ៉ាងសកម្ម និងចូលរួមសកម្មភាពផ្សេងៗជាច្រើនទៀត ដើម្បីពង្រីកចំណេះដឹង និងរៀនអនុវត្តន៍ក្នុងថ្នាក់ដូចការងារជាក់ស្តែង។<br />
 <br />
 ការជួយជ្រុំជ្រែងនិស្សិតៈ យើងប្តេជ្ញាជួយយុវជនក្មេងៗតាមរយៈសិក្សារឥតបង់ថ្លៃ១០០ភាគរយ ផ្តល់ជំនាញចាំបាច់ចំពោះយុវជនដែលមានការប្រកួតប្រជែង និងឱកាសការងារ ដែលមានសុវត្ថភាព។</p>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<p>- ភាពខ្លាំងរបស់យើងគឺសមត្ថភាពក្នុងការផ្តល់កម្មវិធីតាមតម្រូវការអាស្រ័យលើតម្រូវការរបស់អង្គការដោយមិនប៉ះពាល់ដល់គុណភាព។</p>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<p>- ភាពខ្លាំងរបស់យើងគឺសមត្ថភាពក្នុងការផ្តល់កម្មវិធីតាមតម្រូវការអាស្រ័យលើតម្រូវការរបស់អង្គការដោយមិនប៉ះពាល់ដល់គុណភាព។</p>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h1><span style="font-size:18px"><strong>ចំណុចពិសេសរបស់វិទ្យាស្ថានស៊ីអុីអូ(គុណតម្លៃ)</strong></span></h1>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h1><span style="font-size:18px"><strong>ចំណុចពិសេសរបស់វិទ្យាស្ថានស៊ីអុីអូ(គុណតម្លៃ)</strong></span></h1>
 
 <p style="text-align: justify;">វិទ្យាស្ថានស៊ីអ៊ីអូបង្វឹកនិស្សិតឲ្យក្លាយ ជានិស្សិតឆ្នើម បុគ្គលិកឆ្នើម អ្នកដឹកនាំឆ្នើម អ្នកជំនួញឆ្នើម និងក្លាយជាអ្នកមាននា<br />
 ពេលអនាគត</p>
 ', 'inactive');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3><strong>ចំណុចពិសេសទាំង៣របស់ DMC៖</strong></h3>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h3><strong>ចំណុចពិសេសទាំង៣របស់ DMC៖</strong></h3>
 
 <ol>
 	<li>DMC គឺជាវិទ្យាស្ថានដំបូងគេក្នុងប្រទេសកម្ពុជា ដែលផ្ដល់ការអប់រំជំនាញ សារគមនាគមន៍ សារព័ត៌មាន និងប្រព័ន្ធផ្សព្វផ្សាយ។</li>
@@ -147,13 +147,13 @@ INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3><s
 	<li>អតីតនិស្សិត DMC ច្រើជាង៥០ភាគរយបានទទួលអាហារូបករណ៍ ទៅសិក្សានៅប្រទេសអាល្លឺម៉ង់ កាណាដា សហរដ្ឋអាមេរិក អូស្ត្រាលី ជប៉ុន និងប្រទេសមួយចំនួនទៀត។</li>
 </ol>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h1><strong><span style="font-size:18px">ការទទួលស្គាល់</span></strong></h1>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h1><strong><span style="font-size:18px">ការទទួលស្គាល់</span></strong></h1>
 
 <p style="text-align: justify;">យោងតាមតម្រូវការចំាបាច់ក្នុងការអភិវឌ្ឍធនធានមនុស្សផ្នែកធនាគារ និងហិរញ្ញវត្ថុ ថ្នាក់ដឹកនាំធនាគារជាតិ នៃកម្ពុជា បានសម្រេចបង្កើត មណ្ឌលសិក្សាបច្ចេកទេសធនាគារតាមប្រកាសលេខៈ ធ.៨៩៤.៥៥ ប្រ.ក ចុះថ្ងៃទី០១ ខែធ្នូ ឆ្នាំ១៩៩៤ និងត្រូវបានអនុញ្ញាតជាផ្លូវការពីក្រសួងអប់រំ យុវជន និងកីឡា តាមប្រកាសលេខៈ ៦៨អយកប្រក ចុះថ្ងៃទី ០៩ ខែកុម្ភៈ ឆ្នាំ១៩៩៩។<br />
 សញ្ញាបត្រថ្នាក់ ប្រកាសនីយបត្រជាន់ខ្ពស់បច្ចេកទេសធនាគារ របស់មណ្ឌលសិក្សាបច្ចេកទេសធនាគារ ត្រូវបានទទួលស្គាល់ជាផ្លូវការដោយក្រសួងអប់រំ យុវជន និងកីឡា តាមសេចក្តីសម្រេចលេខៈ០៧ អ.យ.ក.ស.ស.រ។ ទន្ទឹមនឹងនេះដើម្បីពង្រឹងវិស័យអប់រំបណ្តុះបណ្តាលឲ្យកាន់តែមានប្រសិទ្ធភាព ថ្នាក់ដឹកនាំ ធនាគារជាតិ នៃកម្ពុជាបានចេញប្រកាសស្តីពី ការដាក់ឲ្យអនុវត្តកម្មវិធី បណ្តុះបណ្តាលថ្មីរបស់មណ្ឌលសិក្សាបច្ចេកទេសធនាគារ លេខៈធ.១.០៣.១០៦.ប្រ.ក ចុះថ្ងៃទី០២ ខែកក្កដា ឆ្នាំ២០០៣។</p>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3><strong>ចំណុចពិសេសទាំង៣របស់សាកលវិទ្យាល័យ ផារ៉ាហ្គន</strong></h3>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h3><strong>ចំណុចពិសេសទាំង៣របស់សាកលវិទ្យាល័យ ផារ៉ាហ្គន</strong></h3>
 
 <p style="text-align:justify">1. តម្លៃសមរម្យ និងគុណភាពខ្ពស់៖** សាកលវិទ្យាល័យផារ៉ាហ្គន ផ្ដល់ការបង្រៀនដោយសាស្ត្រាចារ្យ ដែលមានបទពិសោធន៍ក្នុងការបង្រៀន ព្រមទាំងបំពាក់ដោយគ្រឿងបរិក្ខាទំនើបៗ ដែលជម្រុញឲ្យការសិក្សាកាន់តែមានប្រសិទ្ធភាព។</p>
 
@@ -161,21 +161,21 @@ INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3><s
 
 <p style="text-align:justify">3. **មានដៃគូរសហការច្រើន៖** ផារ៉ាហ្គន មានទំនាក់ទំនងយ៉ាងជិតស្និទជាមួយវិស័យឯកជន ដែលវាបានជួយសម្រួលដល់សិស្សនិស្សិតក្នុងការស្វែងរកឱកាសការងារ ក៏ដូចជាឱកាសទទួលបានអាហារូបករណ៍សិក្សានៅក្រៅប្រទេសផងដែរ។</p>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<p><strong>បីចំណុចដែលធ្វើអោយ KIT លេចធ្លោ</strong></p>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<p><strong>បីចំណុចដែលធ្វើអោយ KIT លេចធ្លោ</strong></p>
 
 <ul>
 	<li>វិទ្យាស្ថានបច្ចេកវិទ្យាគីរីរម្យ (KIT) គឺជាគ្រឹះស្ថានឧត្តមសិក្សាឯកជនមួយ។</li>
@@ -183,13 +183,13 @@ INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<p><st
 	<li>ការធានា 100% នៃការងារបន្ទាប់ពីបញ្ចប់ការសិក្សា។</li>
 </ul>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h1><span style="font-size:18px"><strong>គោលដៅ</strong></span></h1>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h1><span style="font-size:18px"><strong>គោលដៅ</strong></span></h1>
 
 <p><span style="font-size:12pt"><span style="font-family:Arial">វិទ្យាស្ថានសន្តប៉ូលផ្តល់នូវការអប់រំប្រកបដោយគុណភាព និងមានអត្ថន័យប្រសើរ ជាងលទ្ធផលនៃការប្រឡងទៅទៀត។ និស្សិតត្រូវបានបង្រៀនអំពីរបៀបសិក្សា របៀបរិះគិត និងរបៀបរស់នៅប្រកបដោយសុចរិត និងមេត្តាករុណា។</span></span></p>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3><strong>ចំណុចពិសេសទាំង៣របស់សាកលវិទ្យាល័យអាមេរិកាំងភ្នំពេញ</strong></h3>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h3><strong>ចំណុចពិសេសទាំង៣របស់សាកលវិទ្យាល័យអាមេរិកាំងភ្នំពេញ</strong></h3>
 
 <ul>
 	<li><strong>សញ្ញាបត្រទទួលស្គាល់ជាអន្តរជាតិ៖</strong> អាមេរិកាំងភ្នំពេញបានសហការជាមួយ University of Arizona (UA) និង Fort Hays State University (FHSU)។ ហេតុនេះនិស្សិតរបស់អាមេរិកាំងភ្នំពេញនៅក្នុងប្រទេសកម្ពុជា ទទួលបានសញ្ញាប័ត្រចំនួន២ ដែលទទួលស្គាល់ដោយសហរដ្ឋអាមេរិក ដោយពុំចាំបាច់ទៅសិក្សានៅសហរដ្ឋអាមរិកនោះឡើយ។</li>
@@ -197,12 +197,12 @@ INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3><s
 	<li><strong>ផ្តល់ឱកាសហ្វឹកហាត់ការងារ៖</strong> សាកលវិទ្យាល័យអាមេរិកាំងភ្នំពេញ អនុញ្ញាតិឲ្យនិស្សិតសាកល្បង និងអនុវត្តជំនាញរបស់ពួកគេ ដោយការផ្ដល់ឱកាសហ្វឹកហាត់ការងារ ទាំងក្នុង និងក្រៅប្រទេស។</li>
 </ul>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h1><strong><span style="font-size:18px">តម្លៃ​ស្នូល</span></strong></h1>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h1><strong><span style="font-size:18px">តម្លៃ​ស្នូល</span></strong></h1>
 
 <ul>
 	<li>គុណភាព (សុច្ចរិតភាព, នវានុវត្តន៍, ការចូលរួមសកម្មភាពសង្គម)</li>
@@ -210,7 +210,7 @@ INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h1><s
 	<li>សីលធម៌ (ភាពចុះសម្រុងគ្នា, ភាពថ្លៃថ្នូរក្នុងសង្គម, ស្មារតី និងមនសិការសេ្នហាជាតិ)</li>
 </ul>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h1><span style="font-size:18px"><strong>គុណតម្លៃ</strong></span></h1>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h1><span style="font-size:18px"><strong>គុណតម្លៃ</strong></span></h1>
 
 <ol>
 	<li>សមត្ថភាពខ្ពស់ គុណភាព ប្រសិទ្ធភាព គណនេយ្យភាព។</li>
@@ -218,7 +218,7 @@ INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h1><s
 	<li>យុត្តិធម៌ និងសេចក្តីថ្លៃថ្នូរសម្រាប់មនុស្សទាំងអស់។</li>
 </ol>
 ', 'inactive');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h1><span style="font-size:18px"><strong>គុណតម្លៃ</strong></span></h1>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h1><span style="font-size:18px"><strong>គុណតម្លៃ</strong></span></h1>
 
 <ul>
 	<li>អាជីព</li>
@@ -226,12 +226,12 @@ INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h1><s
 	<li>សច្ចភាព</li>
 </ul>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3><strong>ចំណុចពិសេសទាំង៣របស់សាកលសកលវិទ្យាល័យធនធានមនុស្ស៖</strong></h3>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h3><strong>ចំណុចពិសេសទាំង៣របស់សាកលសកលវិទ្យាល័យធនធានមនុស្ស៖</strong></h3>
 
 <ul>
 	<li>
@@ -245,10 +245,10 @@ INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3><s
 	</li>
 </ul>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h1><span style="font-size:20px"><strong>គោលដៅ</strong></span></h1>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h1><span style="font-size:20px"><strong>គោលដៅ</strong></span></h1>
 
 <p>&bull; ការលើកកំពស់គុណភាពនៃការអប់រំដល់ស្តង់ដារជាតិ និងអន្តរជាតិ</p>
 
@@ -258,19 +258,19 @@ INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h1><s
 
 <p>&bull; ការទទួលស្គាល់គុណភាពអប់រំជាតិ និងអន្តរជាតិ</p>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3><strong>Three Things That Make Dichi Stand Out:</strong></h3>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h3><strong>Three Things That Make Dichi Stand Out:</strong></h3>
 
 <p>- LEARN: Active learning, self-paced, project-based<br />
 - PRACTICE: Hands-on learning, practical exercises/quests, building projects, workshops, mock interviews<br />
 - APPLY: Create Solution Oreinted Products, Understand Industrial Applications, Potential to work at Top Tech Companies</p>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h1><span style="font-size:18px"><strong>គោលដៅ</strong></span></h1>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h1><span style="font-size:18px"><strong>គោលដៅ</strong></span></h1>
 
 <p>ដើម្បីសម្រេច បាននូវបេសកម្មខាងលើ វិទ្យាស្ថានខេមរាសាស្រ្ត បានកំណត់គោលដៅចំនួន ១០ និងសម្មភាពជាយុទ្ធសាស្រ្ត៖<br />
 ១ លើកកម្ពស់អភិបាលកិច្ច និងការងារគ្រប់គ្រងដឹកនាំ<br />
@@ -284,8 +284,8 @@ INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h1><s
 ៩ ពង្រឹង និងពង្រីកការងារសហប្រតិបត្តិការជាមួយជាតិនិងអន្តរជាតិ<br />
 ១០ ជំរុញការផ្សព្វផ្សាយព័ត៏មានអំពីវិទ្យាស្ថានឲ្យបានទូលំទូលាយ។</p>
 ', 'inactive');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<p><strong>ចំណុចសំខាន់ដែលវិទ្យាស្ថានសិល្បៈធ្វើម្ហូបកម្ពុជាលេចធ្លោរួមមានៈ</strong></p>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<p><strong>ចំណុចសំខាន់ដែលវិទ្យាស្ថានសិល្បៈធ្វើម្ហូបកម្ពុជាលេចធ្លោរួមមានៈ</strong></p>
 
 <ul>
 	<li style="text-align: justify;">តាមរយៈសម្ព័ន្ធភាពរបស់ខ្លួនជាមួយវិទ្យាស្ថានគ្រប់គ្រងសណ្ធាគារស្វីសលូសិន SHL វិទ្យាស្ថានធានាថាស្តង់ដារស្វីសសម្រាប់ការអប់រំធ្វើម្ហូបនិងបដិសណ្ធារកិច្ចត្រូវបានអនុវត្ត។និស្សិតនិងទទួលបានសញ្ញាប័ត្រ ដែលបញ្ចប់ការសិក្សាដោយជោគជ័យត្រូវបានទទួលស្គាល់ដោយ SHL។</li>
@@ -293,13 +293,13 @@ INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<p><st
 	<li style="text-align: justify;">សម្ព័ន្ធភាពដល់រឹងមាំរបស់វិទ្យាស្ថានជាមួយថ្នាក់ដឹកនាំសណ្ឋាគារនិងភោជនីយដ្ធានដែលបានផ្តល់ដល់និស្សិតនូវឪកាសដែលមិនអាចប្រៀបផ្ទឹមបាន សម្រាប់កម្មសិក្សាការបណ្តុះបណ្តាលនៅកន្លែងធ្វើការនិងការធានាកន្លែងការងារនៅពេលបញ្ចប់ការសិក្សា។</li>
 </ul>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3>ចំណុចពិសេសរបស់សាកលវិទ្យាល័យបច្ចេកវិទ្យា និងវិទ្យាសាស្រ្តកម្ពុជា</h3>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h3>ចំណុចពិសេសរបស់សាកលវិទ្យាល័យបច្ចេកវិទ្យា និងវិទ្យាសាស្រ្តកម្ពុជា</h3>
 
 <ul>
 	<li>សាស្រ្តាចារ្យពេញម៉ោងនិងជាអ្នកស្រាវជ្រាវកម្រិតពិភពលោក ដែលមានសញ្ញាបត្របណ្ឌិត អនុបណ្ឌិត និងបទពិសោធន៍លើឆាកអន្តរជាតិ</li>
@@ -307,8 +307,8 @@ INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3>�
 	<li>tech startups ការិយាល័យនវានុវត្តន៍ ទីលានកីឡា និង កន្លែងហាត់ប្រាណនៅបរិវេណសាលា រួមទាំងការផ្សារភ្ជាប់ជាមួយនឹងសិល្បៈ ដើម្បីផ្តល់កន្លែងសម្រាប់និស្សិតស្វែងយល់ពីទេពកោសល្យរបស់ពួកគេ។</li>
 </ul>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3><strong>ចំណុចពិសេសទាំង៣របស់ NIPTICT</strong></h3>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h3><strong>ចំណុចពិសេសទាំង៣របស់ NIPTICT</strong></h3>
 
 <ul>
 	<li><strong>NIPTICT គឺជាវិទ្យាស្ថានដែលមានឯកទេសផ្នែកព័ត៌មានវិទ្យា និងបច្ចេកវិទ្យាគមនាគមន៍</strong> បង្កើតឡើងដោយក្រសួងប្រៃសណីយ៍ និងទូរគមនាគមន៍។</li>
@@ -320,10 +320,10 @@ INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3><s
 
 <p>&nbsp;</p>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3><strong>ចំណុចពិសេសទាំង៣របស់សាកលវិទ្យាល័យបញ្ញាសាស្ត្រ</strong></h3>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h3><strong>ចំណុចពិសេសទាំង៣របស់សាកលវិទ្យាល័យបញ្ញាសាស្ត្រ</strong></h3>
 
 <p>&nbsp;</p>
 
@@ -339,20 +339,20 @@ INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3><s
 
 <p>&nbsp;</p>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<p>ការ​ចាប់​ផ្តើម​ការ​សិក្សា​របស់​អ្នក​ពី​មុខ​តំណែង​ខ្លាំង​អាច​បង្កើត​ភាព​ជោគជ័យ​ទៅ​ថ្ងៃ​អនាគត។ DMU cambodia គឺផ្តោតលើការផ្តល់នូវការបង្រៀន និងការរៀនពូកែ ហើយទទួលស្គាល់ពីផលប៉ះពាល់ជាវិជ្ជមានដែលមានលើសិស្ស &ndash; មនុស្សដូចអ្នក។</p>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<p>ការ​ចាប់​ផ្តើម​ការ​សិក្សា​របស់​អ្នក​ពី​មុខ​តំណែង​ខ្លាំង​អាច​បង្កើត​ភាព​ជោគជ័យ​ទៅ​ថ្ងៃ​អនាគត។ DMU cambodia គឺផ្តោតលើការផ្តល់នូវការបង្រៀន និងការរៀនពូកែ ហើយទទួលស្គាល់ពីផលប៉ះពាល់ជាវិជ្ជមានដែលមានលើសិស្ស &ndash; មនុស្សដូចអ្នក។</p>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h1><span style="font-size:18px"><strong>គុណតម្លៃ​</strong></span></h1>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h1><span style="font-size:18px"><strong>គុណតម្លៃ​</strong></span></h1>
 
 <p>ស្មោះត្រង់ ការងារជាក្រុម សេវាល្អ ច្នៃប្រឌិតនិងនិវានុវត្តន៏ បំផុសគំនិតទៅអនាគត</p>
 ', 'inactive');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h1><strong><span style="font-size:18px">គោលបំណង</span></strong></h1>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h1><strong><span style="font-size:18px">គោលបំណង</span></strong></h1>
 
 <p>-វិទ្យាស្ថានក្រុងអង្គរនឹងក្លាយជាសាកលវិទ្យាល័យឯកជនមួយ<br />
 -បង្កើនការជ្រើសរើសនិស្សិតចូលរៀនលើថ្នាក់ឆ្នាំសិក្សាមូលដ្ឋាន<br />
 -បណ្តុះបណ្តាលនិស្សិតស្របតាមការអប់រំឧត្តមសិក្សា និងការអប់រំបច្ចេកទេស និងវិជ្ជាជីវៈ។</p>
 ', 'inactive');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h1><span style="font-size:16px"><strong>បីចំណុចដែលធ្វើអោយសាលាលេចធ្លោ</strong></span></h1>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h1><span style="font-size:16px"><strong>បីចំណុចដែលធ្វើអោយសាលាលេចធ្លោ</strong></span></h1>
 
 <ul>
 	<li>វិទ្យាស្ថាន TUX Global Institute គឺជាស្ថាប័នដែលផ្តល់មូលនិធិដោយប្រទេសជប៉ុន ដែលផ្តល់ការអប់រំដោយឥតគិតថ្លៃផ្នែកបច្ចេកវិទ្យា និងវិស្វកម្មដល់បុគ្គលដែលបានជ្រើសរើស។</li>
@@ -360,10 +360,10 @@ INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h1><s
 	<li>និស្សិតបញ្ចប់ការសិក្សានៅវិទ្យាស្ថានសកល TUX នឹងក្លាយទៅជាការប្រកួតប្រជែងខ្លាំងនៅក្នុងទីផ្សារការងារក្នុងស្រុក និងក្នុងតំបន់។</li>
 </ul>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3><strong>ចំណុចពិសេសទាំង៣របស់ វិទ្យាស្ថានពាណិជ្ជកម្មខេមអ៊ែត</strong></h3>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'inactive');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h3><strong>ចំណុចពិសេសទាំង៣របស់ វិទ្យាស្ថានពាណិជ្ជកម្មខេមអ៊ែត</strong></h3>
 
 <ul>
 	<li><strong>ACCA៖</strong> The first official Association of Charted Certified Accountants (ACCA) tuition Provider and Computer-based examination center in Indochina.</li>
@@ -375,8 +375,8 @@ INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3><s
 
 <p>&nbsp;</p>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<p><strong>បីចំណុចដែលធ្វើឱ្យវិទ្យាស្ថានកសិកម្មឧកញ៉ា ម៉ុង ឫទ្ធី មានភាពលេចធ្លោ</strong></p>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<p><strong>បីចំណុចដែលធ្វើឱ្យវិទ្យាស្ថានកសិកម្មឧកញ៉ា ម៉ុង ឫទ្ធី មានភាពលេចធ្លោ</strong></p>
 
 <ul>
 	<li>ជាវិទ្យាសា្ថនឈានមុខខាងផ្នែកវិទ្យាសាស្ដ្រកសិកម្មនិងវិទ្យាសាស្ដ្រសត្វ</li>
@@ -384,8 +384,8 @@ INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<p><st
 	<li>ធ្វើការហាត់ការផ្ទាល់ជាមួយដៃគូក្រុមហ៊ុន</li>
 </ul>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3><strong>ចំណុចពិសេសទាំង៣របស់សាកលវិទ្យាល័យកម្ពុជា</strong></h3>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h3><strong>ចំណុចពិសេសទាំង៣របស់សាកលវិទ្យាល័យកម្ពុជា</strong></h3>
 
 <ol>
 	<li style="text-align:justify"><strong>សាកលវិទ្យាល័យកម្ពុជាប្រើប្រាស់ប្រព័ន្ធសិក្សាក្រេឌីត៖</strong> តាមលំនាំសាកលវិទ្យាល័យនៅសហរដ្ឋអាមេរិក។ ប្រព័ន្ធសិក្សាក្រេឌីតរបស់សាកលវិទ្យាល័យកម្ពុជា អនុញ្ញាតឲ្យនិស្សិតជ្រើសរើសមុខវិជ្ជាសិក្សាផ្សេងបន្ថែមលើមុខវិជ្ជាជំនាញរបស់ខ្លួន។ ប្រព័ន្ធសិក្សានេះជម្រុញឲ្យនិស្សិត ចង់ចេះ ចង់ដឹង ក្នុងការទទួលយកនូវបទពិសោធន៏ដ៏សម្បូរបែបពីកម្មវិធីសិក្សា។ នេះជាកត្តាដែលធ្វើឲ្យនិស្សិតទទួលបាននូវចំណេះដឹងដ៏ទូលំទូលាយ និងភាពបត់បែនក្នុងទីផ្សារការងារ។</li>
@@ -393,7 +393,7 @@ INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3><s
 	<li style="text-align:justify"><strong>សាកលវិទ្យាល័យកម្ពុជាផ្តោតជាចម្បងលើការស្រាវជ្រាវ៖</strong> សាកលវិទ្យាល័យកម្ពុជាផ្តោតសំខាន់លើការស្រាវជ្រាវជាអាទិភាពចម្បង ដែលរួមបញ្ចូលដោយការផ្តល់ចំណេះដឹង បណ្តុះបណ្តាល និងសកម្មភាពសា្រវជ្រាវជាច្រើនទៀតក្នុងកម្មវិធីសិក្សា។ ទាំងអស់នេះជាកត្តាជំរុញអោយនិស្សិតមានឱកាសបង្កើតស្នាដៃដ៏ល្អប្រណីត ហើយបោះពុម្ពផ្សាយក្នុងទស្សនាវដ្តីជាច្រើនរបស់សាកលវិទ្យាល័យកម្ពុជា។</li>
 </ol>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3><strong>ចំណុច ៣ យ៉ាងដែលធ្វើឱ្យIT Academy STEP មានភាពលេចធ្លោដោយ</strong>៖</h3>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h3><strong>ចំណុច ៣ យ៉ាងដែលធ្វើឱ្យIT Academy STEP មានភាពលេចធ្លោដោយ</strong>៖</h3>
 
 <ul>
 	<li>
@@ -407,7 +407,7 @@ INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3><s
 	</li>
 </ul>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3 style="text-align: justify;"><strong>ចំណុចពិសេសទាំង៣របស់សាកលវិទ្យាល័យពុទ្ធិសាស្ត្រ</strong></h3>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h3 style="text-align: justify;"><strong>ចំណុចពិសេសទាំង៣របស់សាកលវិទ្យាល័យពុទ្ធិសាស្ត្រ</strong></h3>
 
 <ul>
 	<li style="text-align: justify;"><strong>កម្មវិធីសិក្សាឆ្នាំមូលដ្ឋាន៖</strong> គឺជាដំណាក់កាលដ៏សំខាន់ដែលនិស្សិតត្រូវស្វែងយល់អំពីរបៀបសិក្ សាដែលរួមបញ្ចូលទាំងការអនុវត្តការងារជាក់ស្ដែង ការធ្វើគម្រោង និងសិក្ខាសាលាច្នៃប្រឌិត។</li>
@@ -415,9 +415,9 @@ INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3 st
 	<li style="text-align: justify;"><strong>បរិក្ខាសិក្សា៖</strong> បរិក្ខាសិក្សាត្រូវបានរៀបចំឲ្យប្រសើរឡើងនៅក្នុងសាកលវិទ្យាល័យពុទ្ធិសាស្ត្រ ដើម្បីអនុញ្ញាតឲ្យនិស្សិតងាយស្រួលប្រើប្រាស់បច្ចេកវិទ្យា។ សេវាកម្មចំណីអាហារក៏ត្រូវបានពង្រឹងសម្រាប់និស្សិត ព្រមទាំងមានការលើកទឹកចិត្តឲ្យមានកិច្ចសហការគ្នារវាងមហាវិទ្យាល័យទាំងអស់។</li>
 </ul>
 ', 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
-INSERT INTO public.undefined ("standOutMessagesKhmer", "status") VALUES ('<h3><strong>រឿងបីយ៉ាងដែលធ្វើឱ្យអាយអាយស៊ីលេចធ្លោ</strong>៖</h3>
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES (NULL, 'active');
+INSERT INTO public.example_table ("standOutMessagesKhmer", "status") VALUES ('<h3><strong>រឿងបីយ៉ាងដែលធ្វើឱ្យអាយអាយស៊ីលេចធ្លោ</strong>៖</h3>
 
 <ul>
 	<li>

@@ -18,6 +18,7 @@ const main: MainFunctionType = async () => {
 
   const mappedTypes = school.Items.map((data) => {
     return {
+      tableName: 'example_table',
       standOutMessagesKhmer: data.standOutMessagesKhmer.S,
       status: data.status.S,
     }
