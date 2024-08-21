@@ -21,6 +21,7 @@ const main: MainFunctionType = async () => {
       tableName: 'example_table',
       standOutMessagesKhmer: data.standOutMessagesKhmer.S,
       status: data.status.S,
+      standOutMessages: data.standOutMessages.S,
     }
   })
   // return
