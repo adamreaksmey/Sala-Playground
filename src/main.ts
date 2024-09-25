@@ -1,5 +1,6 @@
 import axios from 'axios'
 import dotenv from 'dotenv'
+import _File from './functions/files/functions'
 dotenv.config()
 /**
  * This is where main functions are performed.
@@ -16,8 +17,9 @@ const main: MainFunctionType = async () => {
     'c4595c55-23c4-49c6-b471-1628e35a5b43',
     '445bf756-e312-4398-acb4-fd9f41483531',
   ]
+  const studentsWithMultipleSessions: string[] = []
 
-  currentExaminationIds.forEach(async (id, index) => {
+  for (const id of currentExaminationIds) {
     const { data, ...rest } = await axios({
       method: 'get',
       baseURL: 'https://lms.ibfkh.org/api-qa',
@@ -36,12 +38,13 @@ const main: MainFunctionType = async () => {
         url: `/user/${user._source.user.userId}/get_active_sessions`,
       })
 
+      if (data.length > 1) {
+        studentsWithMultipleSessions.push(user._source.user)
+        _File.reWriter('./src/multi-sessions.json', JSON.stringify(studentsWithMultipleSessions, null, 2));
+      }
       console.log('dataaaa', data)
     }
-
-    // console.log(index, data.data)
-    // console.log('rest', rest)
-  })
+  }
 
   // console.log(data)
 }
